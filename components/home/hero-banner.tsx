@@ -62,7 +62,7 @@ export default function HeroBanner() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={ "/image.png"}
+              src={ "/image2.png"}
               alt={slide.title}
               fill
               className="object-cover"

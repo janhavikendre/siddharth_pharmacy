@@ -174,12 +174,7 @@ export function AdminSidebar() {
               {openSubmenus.content && (
                 <SidebarMenuSub>
                   <SidebarMenuSubItem>
-                    <SidebarMenuSubButton asChild isActive={pathname === "/admin/dashboard/content/home"}>
-                      <Link href="/admin/dashboard/content/home">
-                        <Home className="h-4 w-4 mr-2" />
-                        Home Page
-                      </Link>
-                    </SidebarMenuSubButton>
+                   
                   </SidebarMenuSubItem>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild isActive={pathname === "/admin/dashboard/content/about"}>
@@ -201,14 +196,7 @@ export function AdminSidebar() {
               )}
             </SidebarMenuItem>
 
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={pathname === "/admin/dashboard/settings"}>
-                <Link href="/admin/dashboard/settings">
-                  <Settings className="h-5 w-5" />
-                  <span>Settings</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
+          
           </SidebarMenu>
         </SidebarContent>
 
