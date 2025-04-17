@@ -1,23 +1,37 @@
 import { FacultyTabs } from "@/components/faculty/faculty-tabs"
-import clientPromise from "@/lib/mongodb"
+import { headers } from 'next/headers'
 
 async function getFaculty() {
   try {
-    const client = await clientPromise
-    const db = client.db("fashion_institute")
-
-    const teachingFaculty = await db
-      .collection("faculty")
-      .find({ isTeaching: { $ne: false } })
-      .sort({ name: 1 })
-      .toArray()
-
-    const nonTeachingFaculty = await db.collection("faculty").find({ isTeaching: false }).sort({ name: 1 }).toArray()
-
-    return {
-      teaching: JSON.parse(JSON.stringify(teachingFaculty)),
-      nonTeaching: JSON.parse(JSON.stringify(nonTeachingFaculty)),
+    const headersList = await headers()
+    const host = headersList.get('host') || 'localhost:3000'
+    const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https'
+    
+    const response = await fetch(`${protocol}://${host}/api/faculty`, {
+      next: { revalidate: 0 },
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+      },
+    })
+    
+    type Faculty = {
+      _id: string;
+      name: string;
+      designation: string;
+      department?: string;
+      isTeaching?: boolean;
+      [key: string]: any;
     }
+    
+    const { success, data } = await response.json() as { success: boolean; data: Faculty[] }
+    if (!success) throw new Error('Failed to fetch faculty')
+
+    const teaching = data.filter(f => f.isTeaching !== false)
+    const nonTeaching = data.filter(f => f.isTeaching === false)
+
+    return { teaching, nonTeaching }
   } catch (error) {
     console.error("Error fetching faculty:", error)
     return { teaching: [], nonTeaching: [] }

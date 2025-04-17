@@ -8,10 +8,17 @@ export async function GET() {
 
     const faculty = await db.collection("faculty").find({}).sort({ name: 1 }).toArray()
 
-    return NextResponse.json({
+    const response = NextResponse.json({
       success: true,
       data: faculty,
     })
+
+    // Set cache control headers
+    response.headers.set('Cache-Control', 'no-cache, no-store, must-revalidate')
+    response.headers.set('Pragma', 'no-cache')
+    response.headers.set('Expires', '0')
+
+    return response
   } catch (error) {
     console.error("Database error:", error)
     return NextResponse.json({ success: false, error: "Failed to fetch faculty" }, { status: 500 })
