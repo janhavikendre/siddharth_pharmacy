@@ -2,27 +2,71 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Download, FileText } from "lucide-react"
-import clientPromise from "@/lib/mongodb"
-import { ObjectId } from "mongodb"
-import { getFile } from "@/lib/upload"
+import { headers } from "next/headers"
 
-async function getAdmissionContent() {
+interface FileMetadata {
+  type: string;
+  section?: string;
+}
+
+interface FileDocument {
+  _id: string;
+  filename?: string;
+  metadata: FileMetadata;
+  uploadDate?: Date;
+}
+
+interface GovtResolution {
+  id: string;
+  name: string;
+}
+
+interface AdmissionContent {
+  section?: string;
+  process?: string;
+  importantDates?: string;
+  eligibility?: string;
+  feeStructure?: string;
+  scholarship?: string;
+  cancellation?: string;
+  brochureId?: string;
+  admissionFormId?: string;
+  scholarshipFileId?: string;
+  admissionInfoId?: string;
+  govtResolutions?: GovtResolution[];
+}
+
+interface ApiResponse {
+  success: boolean;
+  data: AdmissionContent;
+  error?: string;
+}
+
+interface AdmissionData {
+  content: AdmissionContent;
+  files: FileDocument[];
+}
+
+async function getAdmissionContent(): Promise<AdmissionData> {
   try {
-    const client = await clientPromise
-    const db = client.db("fashion_institute")
+    const headersList = await headers()
+    const host = headersList.get('host') || 'localhost:3000'
+    const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https'
 
-    const admissionContent = await db.collection("content").findOne({ section: "admission" })
-    
-    // Get files with metadata.section: "admission" 
-    const filesWithMetadata = await db
-      .collection("fs.files")
-      .find({
-        "metadata.section": "admission",
-      })
-      .toArray()
-    
-    // Create a direct brochure file reference from brochureId
-    let specificFiles = []
+    const response = await fetch(`${protocol}://${host}/api/content/admission`, {
+      next: { revalidate: 0 },
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+      },
+    })
+
+    const { success, data } = await response.json() as ApiResponse
+    if (!success) throw new Error('Failed to fetch admission content')
+
+    const admissionContent = data || {}
+    const specificFiles: FileDocument[] = []
     
     if (admissionContent?.brochureId) {
       specificFiles.push({
@@ -52,23 +96,18 @@ async function getAdmissionContent() {
       });
     }
     
-    // Add government resolutions if they exist
-    if (admissionContent?.govtResolutions?.length > 0) {
-      for (const resolution of admissionContent.govtResolutions) {
-        specificFiles.push({
-          _id: resolution.id,
-          filename: resolution.name,
-          metadata: { type: "government-resolution" }
-        });
-      }
+    const governmentResolutions = admissionContent.govtResolutions ?? [];
+    for (const resolution of governmentResolutions) {
+      specificFiles.push({
+        _id: resolution.id,
+        filename: resolution.name,
+        metadata: { type: "government-resolution" }
+      });
     }
-    
-    // Combine files from both sources
-    const allFiles = [...filesWithMetadata, ...specificFiles];
-    
+
     return {
-      content: admissionContent || {},
-      files: allFiles || [],
+      content: admissionContent,
+      files: specificFiles,
     }
   } catch (error) {
     console.error("Error fetching admission content:", error)
@@ -82,10 +121,10 @@ async function getAdmissionContent() {
 export default async function AdmissionPage() {
   const { content, files } = await getAdmissionContent()
 
-  const brochureFile = files.find((f) => f.metadata.type === "brochure")
-  const admissionFormFile = files.find((f) => f.metadata.type === "admission-form")
-  const scholarshipFile = files.find((f) => f.metadata.type === "scholarship")
-  const admissionInfoFile = files.find((f) => f.metadata.type === "admission-info")
+  const brochureFile = files.find((f: FileDocument) => f.metadata.type === "brochure")
+  const admissionFormFile = files.find((f: FileDocument) => f.metadata.type === "admission-form")
+  const scholarshipFile = files.find((f: FileDocument) => f.metadata.type === "scholarship")
+  const admissionInfoFile = files.find((f: FileDocument) => f.metadata.type === "admission-info")
 
   return (
     <div className="container mx-auto px-4 py-12">

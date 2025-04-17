@@ -1,7 +1,34 @@
 import { FacultyTabs } from "@/components/faculty/faculty-tabs"
 import { headers } from 'next/headers'
 
-async function getFaculty() {
+interface Faculty {
+  _id: string;
+  name: string;
+  designation: string;
+  department?: string;
+  qualification?: string;
+  experience?: string;
+  specialization?: string;
+  email?: string;
+  bio?: string;
+  imageId?: string;
+  isTeaching?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+interface ApiResponse {
+  success: boolean;
+  data: Faculty[];
+  error?: string;
+}
+
+interface FacultyData {
+  teaching: Faculty[];
+  nonTeaching: Faculty[];
+}
+
+async function getFaculty(): Promise<FacultyData> {
   try {
     const headersList = await headers()
     const host = headersList.get('host') || 'localhost:3000'
@@ -16,16 +43,7 @@ async function getFaculty() {
       },
     })
     
-    type Faculty = {
-      _id: string;
-      name: string;
-      designation: string;
-      department?: string;
-      isTeaching?: boolean;
-      [key: string]: any;
-    }
-    
-    const { success, data } = await response.json() as { success: boolean; data: Faculty[] }
+    const { success, data } = await response.json() as ApiResponse
     if (!success) throw new Error('Failed to fetch faculty')
 
     const teaching = data.filter(f => f.isTeaching !== false)

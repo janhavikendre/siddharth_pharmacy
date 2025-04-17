@@ -312,116 +312,17 @@ export default function AdmissionsPage() {
                   )}
                 </div>
 
-                <div className="space-y-2">
-                  <Label>Admission Form</Label>
-                  <FileUpload
-                    type="pdf"
-                    onUploadComplete={(data) => handleFileUpload(data, "admissionForm")}
-                    maxSizeMB={5}
-                    buttonText="Upload Admission Form"
-                  />
-                  {admissionFormId && (
-                    <div className="mt-2">
-                      <a
-                        href={`/api/files/${admissionFormId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-blue-600 hover:underline"
-                      >
-                        View Uploaded Admission Form
-                      </a>
-                    </div>
-                  )}
-                </div>
+          
 
-                <div className="space-y-2">
-                  <Label>Scholarship Details Document</Label>
-                  <FileUpload
-                    type="pdf"
-                    onUploadComplete={(data) => handleFileUpload(data, "scholarship")}
-                    maxSizeMB={5}
-                    buttonText="Upload Scholarship Document"
-                  />
-                  {scholarshipFileId && (
-                    <div className="mt-2">
-                      <a
-                        href={`/api/files/${scholarshipFileId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-blue-600 hover:underline"
-                      >
-                        View Uploaded Scholarship Document
-                      </a>
-                    </div>
-                  )}
-                </div>
+              
 
-                <div className="space-y-2">
-                  <Label>Admission Information</Label>
-                  <FileUpload
-                    type="pdf"
-                    onUploadComplete={(data) => handleFileUpload(data, "admissionInfo")}
-                    maxSizeMB={5}
-                    buttonText="Upload Admission Info"
-                  />
-                  {admissionInfoId && (
-                    <div className="mt-2">
-                      <a
-                        href={`/api/files/${admissionInfoId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-blue-600 hover:underline"
-                      >
-                        View Uploaded Admission Info
-                      </a>
-                    </div>
-                  )}
-                </div>
+            
               </div>
 
               <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <Label>Government Resolutions</Label>
-                  <div>
-                    <FileUpload
-                      type="pdf"
-                      onUploadComplete={(data) => handleFileUpload(data, "govtResolution")}
-                      maxSizeMB={5}
-                      buttonText="Upload Government Resolution"
-                    />
-                  </div>
-                </div>
+              
 
-                {govtResolutions.length > 0 ? (
-                  <div className="space-y-2">
-                    {govtResolutions.map((resolution, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 border rounded-md">
-                        <div className="flex-1">
-                          <p className="font-medium">{resolution.name}</p>
-                        </div>
-                        <div className="flex space-x-2">
-                          <a
-                            href={`/api/files/${resolution.id}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-blue-600 hover:underline"
-                          >
-                            View
-                          </a>
-                          <button
-                            type="button"
-                            onClick={() => removeGovtResolution(index)}
-                            className="text-sm text-red-600 hover:underline"
-                          >
-                            Remove
-                          </button>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-sm text-gray-500">No government resolutions uploaded yet.</p>
-                )}
+          
               </div>
             </CardContent>
           </Card>

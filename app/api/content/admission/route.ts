@@ -1,16 +1,33 @@
 import { NextResponse } from "next/server"
 import clientPromise from "@/lib/mongodb"
+import type { WithId, Document } from 'mongodb'
+
+interface AdmissionContent extends Document {
+  section: string;
+  process?: string;
+  importantDates?: string;
+  eligibility?: string;
+  feeStructure?: string;
+  scholarship?: string;
+  cancellation?: string;
+  brochureId?: string;
+  admissionFormId?: string;
+  scholarshipFileId?: string;
+  admissionInfoId?: string;
+  govtResolutions?: Array<{ id: string; name: string }>;
+  updatedAt?: Date;
+}
 
 export async function GET() {
   try {
     const client = await clientPromise
     const db = client.db("fashion_institute")
 
-    const content = await db.collection("content").findOne({ section: "admission" })
+    const content = await db.collection<AdmissionContent>("content").findOne({ section: "admission" })
 
     return NextResponse.json({
       success: true,
-      data: content,
+      data: content || {},
     })
   } catch (error) {
     console.error("Database error:", error)
@@ -38,7 +55,7 @@ export async function POST(request: Request) {
     const db = client.db("fashion_institute")
 
     // Update or insert content
-    const result = await db.collection("content").updateOne(
+    const result = await db.collection<AdmissionContent>("content").updateOne(
       { section: "admission" },
       {
         $set: {
