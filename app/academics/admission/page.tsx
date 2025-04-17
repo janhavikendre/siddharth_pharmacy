@@ -222,17 +222,7 @@ export default async function AdmissionPage() {
               <div className="overflow-x-auto">
                 <table className="min-w-full bg-white border border-gray-200 rounded-lg">
                   <thead>
-                    <tr className="bg-gray-50">
-                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
-                        Program
-                      </th>
-                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
-                        Minimum Qualification
-                      </th>
-                      <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
-                        Additional Requirements
-                      </th>
-                    </tr>
+               
                   </thead>
                   <tbody className="divide-y divide-gray-200">
                     {content.eligibility ? (
