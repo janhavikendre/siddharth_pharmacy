@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@aws-sdk/credential-providers": "latest",
     "@hookform/resolvers": "^3.9.1",
     "@mongodb-js/zstd": "latest",
+    "@next/bundle-analyzer": "^15.3.1",
     "@nextui-org/react": "latest",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.4",
@@ -60,8 +62,8 @@
     "os": "latest",
     "path": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-day-picker": "8.10.1",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.54.1",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.0",
