@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import clientPromise from "@/lib/mongodb"
+import { ObjectId } from "mongodb"
 
 // Simple admin authentication middleware
 async function isAuthenticated(request: Request) {
@@ -20,13 +21,19 @@ export async function GET() {
       .sort({ createdAt: -1 })
       .toArray()
 
-    return NextResponse.json({
-      success: true,
-      data: announcements,
-    })
+    return NextResponse.json(
+      {
+        success: true,
+        data: announcements,
+      },
+      { headers: { "Cache-Control": "no-store" } }
+    )
   } catch (error) {
     console.error("Database error:", error)
-    return NextResponse.json({ success: false, error: "Failed to fetch announcements" }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: "Failed to fetch announcements" },
+      { status: 500, headers: { "Cache-Control": "no-store" } }
+    )
   }
 }
 
@@ -68,5 +75,26 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Database error:", error)
     return NextResponse.json({ success: false, error: "Failed to create announcement" }, { status: 500 })
+  }
+}
+
+export async function DELETE(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url)
+    const id = searchParams.get("id")
+    if (!id) {
+      return NextResponse.json({ success: false, error: "Missing announcement id" }, { status: 400 })
+    }
+    const client = await clientPromise
+    const db = client.db("fashion_institute")
+    const result = await db.collection("announcements").deleteOne({ _id: new ObjectId(id) })
+    if (result.deletedCount === 1) {
+      return NextResponse.json({ success: true, data: { deletedCount: result.deletedCount } })
+    } else {
+      return NextResponse.json({ success: false, error: "Announcement not found" }, { status: 404 })
+    }
+  } catch (error) {
+    console.error("Delete error:", error)
+    return NextResponse.json({ success: false, error: "Failed to delete announcement" }, { status: 500 })
   }
 }
