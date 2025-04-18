@@ -1,9 +1,12 @@
+import "../lib/react-polyfill" // Import the polyfill first
 import type React from "react"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
 import "./globals.css"
 import { Providers } from "./providers"
 import Footer from "@/components/layout/footer"
-import { Toaster } from "@/components/ui/toaster"
 import PageLayout from "@/components/layout/page-layout"
 
 const inter = Inter({ subsets: ["latin"] })
