@@ -1,25 +1,54 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Plus, Edit, Trash2 } from "lucide-react"
-import clientPromise from "@/lib/mongodb"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 
-async function getAnnouncements() {
-  try {
-    const client = await clientPromise
-    const db = client.db("fashion_institute")
-
-    const announcements = await db.collection("announcements").find({}).sort({ createdAt: -1 }).toArray()
-
-    return JSON.parse(JSON.stringify(announcements))
-  } catch (error) {
-    console.error("Error fetching announcements:", error)
-    return []
+// Client-only delete button component
+function DeleteButton({ id }: { id: string }) {
+  const router = useRouter()
+  async function handleDelete() {
+    if (!confirm("Are you sure you want to delete this announcement?")) return
+    try {
+      const res = await fetch(`/api/announcements?id=${id}`, { method: "DELETE" })
+      const result = await res.json()
+      if (result.success) {
+        router.refresh()
+      } else {
+        alert(result.error || "Failed to delete")
+      }
+    } catch (error) {
+      console.error("Delete error:", error)
+      alert("An error occurred during deletion.")
+    }
   }
+  return (
+    <button onClick={handleDelete} className="h-8 w-8 text-red-500 hover:text-red-600 hover:bg-red-50">
+      <Trash2 className="h-4 w-4" />
+      <span className="sr-only">Delete</span>
+    </button>
+  )
 }
 
-export default async function AnnouncementsPage() {
-  const announcements = await getAnnouncements()
+export default function AnnouncementsPage() {
+  const [announcements, setAnnouncements] = useState<any[]>([])
+  const router = useRouter()
+  useEffect(() => {
+    // Client components must use a relative URL
+    async function loadAnnouncements() {
+      try {
+        const res = await fetch("/api/announcements", { cache: "no-store" })
+        const data = await res.json()
+        setAnnouncements(data.data ?? [])
+      } catch (error) {
+        console.error("Error fetching announcements:", error)
+      }
+    }
+    loadAnnouncements()
+  }, [])
 
   return (
     <div className="space-y-6">
@@ -38,13 +67,18 @@ export default async function AnnouncementsPage() {
       <Card>
         <CardHeader>
           <CardTitle>All Announcements</CardTitle>
-          <CardDescription>Announcements are displayed in the marquee on the home page</CardDescription>
+          <CardDescription>
+            Announcements are displayed in the marquee on the home page
+          </CardDescription>
         </CardHeader>
         <CardContent>
           {announcements && announcements.length > 0 ? (
             <div className="space-y-4">
               {announcements.map((announcement) => (
-                <div key={announcement._id} className="flex items-center justify-between p-4 border rounded-lg">
+                <div
+                  key={announcement._id}
+                  className="flex items-center justify-between p-4 border rounded-lg"
+                >
                   <div className="flex-1 mr-4">
                     <div className="flex items-center">
                       <span className="font-medium">{announcement.text}</span>
@@ -77,14 +111,7 @@ export default async function AnnouncementsPage() {
                         <span className="sr-only">Edit</span>
                       </Link>
                     </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="h-8 w-8 text-red-500 hover:text-red-600 hover:bg-red-50"
-                    >
-                      <Trash2 className="h-4 w-4" />
-                      <span className="sr-only">Delete</span>
-                    </Button>
+                    <DeleteButton id={announcement._id} />
                   </div>
                 </div>
               ))}
