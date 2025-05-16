@@ -14,7 +14,7 @@ async function getCommittees() {
   }
 }
 
-export default async function CommitteesPage() {
+export default async function CommitteesPage({ searchParams }: { searchParams: { section?: string } }) {
   const committees = await getCommittees()
 
   // Define default committees if none are found in the database
@@ -56,10 +56,11 @@ export default async function CommitteesPage() {
   // Merge database committees with default committees
   const allCommittees = committees.length > 0 ? committees : defaultCommittees
 
+  const section = searchParams.section || "antiragging" // default section
+
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center mb-12">Committees</h1>
-      <CommitteeTabs committees={allCommittees} />
-    </div>
+    <main className="container py-10">
+      <CommitteeTabs committees={allCommittees} section={section} />
+    </main>
   )
 }

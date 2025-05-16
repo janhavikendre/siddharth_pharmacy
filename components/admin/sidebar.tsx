@@ -52,7 +52,7 @@ export function AdminSidebar() {
         <SidebarHeader className="border-b border-gray-200 py-3">
           <div className="flex items-center px-4">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-rose-600 flex items-center justify-center text-white font-bold">
+              <div className="h-8 w-8 rounded-full  bg-blue-600flex items-center justify-center text-white font-bold">
                 F
               </div>
               <span className="font-bold text-lg">Admin Panel</span>

@@ -183,7 +183,7 @@ export default function FacilityDetailPage({ params }: { params: { id: string } 
             <Button variant="outline" onClick={() => router.push("/admin/dashboard/facilities")}>
               Cancel
             </Button>
-            <Button onClick={handleSave} className="bg-rose-600 hover:bg-rose-700" disabled={isSaving}>
+            <Button onClick={handleSave} className=" bg-blue-600:bg-blue-700" disabled={isSaving}>
               {isSaving ? "Saving..." : "Save Changes"}
             </Button>
           </div>

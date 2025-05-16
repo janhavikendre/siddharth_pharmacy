@@ -13,11 +13,11 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
         <Card className="hover:shadow-md transition-shadow">
           <CardContent className="p-6 flex flex-col items-center text-center">
-            <div className="bg-rose-100 p-3 rounded-full mb-4">
-              <Mail className="h-6 w-6 text-rose-600" />
+            <div className="text-blue-100 p-3 rounded-full mb-4">
+              <Mail className="h-6 w-6 text-blue-600" />
             </div>
             <h3 className="font-semibold mb-2">Email</h3>
-            <a href="mailto:523nationalinstitute@gmail.com" className="text-rose-600 hover:underline">
+            <a href="mailto:523nationalinstitute@gmail.com" className="text-blue-600 hover:underline">
               523nationalinstitute@gmail.com
             </a>
           </CardContent>
@@ -25,14 +25,14 @@ export default function ContactPage() {
 
         <Card className="hover:shadow-md transition-shadow">
           <CardContent className="p-6 flex flex-col items-center text-center">
-            <div className="bg-rose-100 p-3 rounded-full mb-4">
-              <Phone className="h-6 w-6 text-rose-600" />
+            <div className="text-blue-100 p-3 rounded-full mb-4">
+              <Phone className="h-6 w-6 text-blue-600" />
             </div>
             <h3 className="font-semibold mb-2">Phone</h3>
-            <a href="tel:+919974469124" className="text-rose-600 hover:underline">
+            <a href="tel:+919974469124" className="text-blue-600 hover:underline">
               +91 9974469124
             </a>
-            <a href="tel:+918411888688" className="text-rose-600 hover:underline mt-1">
+            <a href="tel:+918411888688" className="text-blue-600 hover:underline mt-1">
               +91 8411888688
             </a>
           </CardContent>
@@ -40,8 +40,8 @@ export default function ContactPage() {
 
         <Card className="hover:shadow-md transition-shadow">
           <CardContent className="p-6 flex flex-col items-center text-center">
-            <div className="bg-rose-100 p-3 rounded-full mb-4">
-              <Clock className="h-6 w-6 text-rose-600" />
+            <div className="text-blue-100 p-3 rounded-full mb-4">
+              <Clock className="h-6 w-6 text-blue-600" />
             </div>
             <h3 className="font-semibold mb-2">Working Hours</h3>
             <p className="text-gray-700">Monday - Saturday</p>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                 <Textarea id="message" placeholder="Enter your message" rows={5} required />
               </div>
 
-              <Button type="submit" className="bg-rose-600 hover:bg-rose-700 w-full md:w-auto">
+              <Button type="submit" className=" bg-blue-600:bg-blue-700 w-full md:w-auto">
                 Send Message
               </Button>
             </form>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="National Institute of Fashion Designing, Kasar Sirsi"
+                title="Deshmukh College Of Pharmacy"
               ></iframe>
             </div>
           </CardContent>
@@ -105,7 +105,7 @@ export default function ContactPage() {
       <Card>
         <CardContent className="p-6">
           <div className="flex items-start">
-            <MapPin className="h-5 w-5 text-rose-600 mr-3 mt-1" />
+            <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-1" />
             <div>
               <h3 className="font-semibold mb-2">Our Address</h3>
               <p className="text-gray-700">

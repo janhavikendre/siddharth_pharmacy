@@ -93,7 +93,7 @@ export function GalleryContent() {
       <div className="flex justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="border-rose-200 bg-rose-50 hover:bg-rose-100">
+            <Button variant="outline" className="border-rose-200 bg-blue-50 hover:text-blue-100">
               {currentCategory?.name || "Select Category"}
               <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
@@ -116,7 +116,7 @@ export function GalleryContent() {
         <>
           {currentCategory && (
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-rose-800 mb-2">{currentCategory.name}</h2>
+              <h2 className="text-2xl font-bold text-blue-800 mb-2">{currentCategory.name}</h2>
               {currentCategory.description && (
                 <p className="text-gray-600 max-w-2xl mx-auto">{currentCategory.description}</p>
               )}
@@ -138,7 +138,7 @@ export function GalleryContent() {
                     </div>
                     {(image.title || image.description) && (
                       <div className="p-4">
-                        {image.title && <h3 className="font-bold text-rose-800">{image.title}</h3>}
+                        {image.title && <h3 className="font-bold text-blue-800">{image.title}</h3>}
                         {image.description && <p className="text-gray-600 text-sm mt-1">{image.description}</p>}
                       </div>
                     )}

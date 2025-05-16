@@ -57,7 +57,7 @@ export default function AnnouncementsPage() {
           <h1 className="text-3xl font-bold tracking-tight">Announcements</h1>
           <p className="text-gray-500">Manage announcements displayed on the website</p>
         </div>
-        <Button asChild className="bg-rose-600 hover:bg-rose-700">
+        <Button asChild className=" bg-blue-600:bg-blue-700">
           <Link href="/admin/dashboard/announcements/new">
             <Plus className="h-4 w-4 mr-2" /> Add Announcement
           </Link>
@@ -84,7 +84,7 @@ export default function AnnouncementsPage() {
                       <span className="font-medium">{announcement.text}</span>
                       <span
                         className={`ml-3 px-2 py-1 text-xs rounded-full ${
-                          announcement.isActive ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"
+                          announcement.isActive ? "bg-green-100 text-blue-800" : "bg-gray-100 text-gray-800"
                         }`}
                       >
                         {announcement.isActive ? "Active" : "Inactive"}
@@ -119,7 +119,7 @@ export default function AnnouncementsPage() {
           ) : (
             <div className="text-center py-8">
               <p className="text-gray-500">No announcements found</p>
-              <Button asChild className="mt-4 bg-rose-600 hover:bg-rose-700">
+              <Button asChild className="mt-4  bg-blue-600:bg-blue-700">
                 <Link href="/admin/dashboard/announcements/new">Create your first announcement</Link>
               </Button>
             </div>

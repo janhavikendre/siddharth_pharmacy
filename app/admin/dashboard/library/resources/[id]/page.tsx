@@ -243,7 +243,7 @@ export default function EditLibraryResourcePage() {
             <Button type="button" variant="outline" onClick={() => router.push("/admin/dashboard/library")}>
               Cancel
             </Button>
-            <Button type="submit" className="bg-rose-600 hover:bg-rose-700" disabled={isSubmitting}>
+            <Button type="submit" className=" bg-blue-600:bg-blue-700" disabled={isSubmitting}>
               {isSubmitting ? "Updating..." : "Update Resource"}
             </Button>
           </CardFooter>

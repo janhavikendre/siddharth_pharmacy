@@ -80,7 +80,7 @@ export default function FacilitiesPage() {
           <h1 className="text-3xl font-bold tracking-tight">Facilities</h1>
           <p className="text-gray-500">Manage institute facilities</p>
         </div>
-        <Button asChild className="bg-rose-600 hover:bg-rose-700">
+        <Button asChild className=" bg-blue-600:bg-blue-700">
           <Link href="/admin/dashboard/facilities/new">
             <Plus className="h-4 w-4 mr-2" /> Add Facility
           </Link>
@@ -138,7 +138,7 @@ export default function FacilitiesPage() {
           ) : (
             <div className="text-center py-8">
               <p className="text-gray-500">No facilities found</p>
-              <Button asChild className="mt-4 bg-rose-600 hover:bg-rose-700">
+              <Button asChild className="mt-4  bg-blue-600:bg-blue-700">
                 <Link href="/admin/dashboard/facilities/new">Add your first facility</Link>
               </Button>
             </div>

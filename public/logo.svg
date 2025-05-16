@@ -9,8 +9,7 @@
   <path id="topText" d="M 256, 60 a 196, 196 0 0 1 0, 392 a 196, 196 0 0 1 0, -392" fill="none"/>
   <text>
     <textPath href="#topText" startOffset="50%" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="24" fill="#333333">
-      NATIONAL INSTITUTE OF FASHION DESIGNING
-    </textPath>
+      Deshmukh College Of Pharmacy    </textPath>
   </text>
   
   <!-- Text around the bottom of the circle -->

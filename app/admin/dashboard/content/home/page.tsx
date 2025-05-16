@@ -345,7 +345,7 @@ export default function HomeContentPage() {
                   ))}
 
                   <div className="flex justify-end">
-                    <Button onClick={handleSaveSlides} className="bg-rose-600 hover:bg-rose-700" disabled={isSaving}>
+                    <Button onClick={handleSaveSlides} className=" bg-blue-600:bg-blue-700" disabled={isSaving}>
                       {isSaving ? "Saving..." : "Save Slides"}
                     </Button>
                   </div>
@@ -353,7 +353,7 @@ export default function HomeContentPage() {
               ) : (
                 <div className="text-center py-8">
                   <p className="text-gray-500">No slides found</p>
-                  <Button onClick={addSlide} className="mt-4 bg-rose-600 hover:bg-rose-700">
+                  <Button onClick={addSlide} className="mt-4  bg-blue-600:bg-blue-700">
                     Add Your First Slide
                   </Button>
                 </div>
@@ -438,7 +438,7 @@ export default function HomeContentPage() {
                   <div className="flex justify-end">
                     <Button
                       onClick={handleSaveHighlights}
-                      className="bg-rose-600 hover:bg-rose-700"
+                      className=" bg-blue-600:bg-blue-700"
                       disabled={isSaving}
                     >
                       {isSaving ? "Saving..." : "Save Highlights"}
@@ -448,7 +448,7 @@ export default function HomeContentPage() {
               ) : (
                 <div className="text-center py-8">
                   <p className="text-gray-500">No highlights found</p>
-                  <Button onClick={addHighlight} className="mt-4 bg-rose-600 hover:bg-rose-700">
+                  <Button onClick={addHighlight} className="mt-4  bg-blue-600:bg-blue-700">
                     Add Your First Highlight
                   </Button>
                 </div>
@@ -494,7 +494,7 @@ export default function HomeContentPage() {
                   ))}
 
                   <div className="flex justify-end">
-                    <Button onClick={handleSaveReasons} className="bg-rose-600 hover:bg-rose-700" disabled={isSaving}>
+                    <Button onClick={handleSaveReasons} className=" bg-blue-600:bg-blue-700" disabled={isSaving}>
                       {isSaving ? "Saving..." : "Save Reasons"}
                     </Button>
                   </div>
@@ -502,7 +502,7 @@ export default function HomeContentPage() {
               ) : (
                 <div className="text-center py-8">
                   <p className="text-gray-500">No reasons found</p>
-                  <Button onClick={addReason} className="mt-4 bg-rose-600 hover:bg-rose-700">
+                  <Button onClick={addReason} className="mt-4  bg-blue-600:bg-blue-700">
                     Add Your First Reason
                   </Button>
                 </div>

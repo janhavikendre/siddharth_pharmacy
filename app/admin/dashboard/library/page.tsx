@@ -140,7 +140,7 @@ export default function LibraryPage() {
           <h1 className="text-3xl font-bold tracking-tight">Library Management</h1>
           <p className="text-gray-500">Manage library content and resources</p>
         </div>
-        <Button asChild className="bg-rose-600 hover:bg-rose-700">
+        <Button asChild className=" bg-blue-600:bg-blue-700">
           <Link href="/admin/dashboard/library/resources/new">
             <Plus className="h-4 w-4 mr-2" /> Add Resource
           </Link>
@@ -189,7 +189,7 @@ export default function LibraryPage() {
               </div>
 
               <div className="flex justify-end">
-                <Button onClick={handleSaveContent} className="bg-rose-600 hover:bg-rose-700" disabled={isSaving}>
+                <Button onClick={handleSaveContent} className=" bg-blue-600:bg-blue-700" disabled={isSaving}>
                   {isSaving ? "Saving..." : "Save Content"}
                 </Button>
               </div>
@@ -247,7 +247,7 @@ export default function LibraryPage() {
               ) : (
                 <div className="text-center py-8">
                   <p className="text-gray-500">No resources found</p>
-                  <Button asChild className="mt-4 bg-rose-600 hover:bg-rose-700">
+                  <Button asChild className="mt-4  bg-blue-600:bg-blue-700">
                     <Link href="/admin/dashboard/library/resources/new">Add Your First Resource</Link>
                   </Button>
                 </div>

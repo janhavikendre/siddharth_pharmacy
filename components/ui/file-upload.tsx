@@ -149,12 +149,12 @@ export default function FileUpload({
           htmlFor="file-upload"
           className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer ${
             disabled ? "opacity-50 cursor-not-allowed" : ""
-          } ${file ? "border-green-300 bg-green-50" : "border-rose-300 hover:bg-rose-50"}`}
+          } ${file ? "border-green-300 bg-green-50" : "border-rose-300 hover:bg-blue-50"}`}
         >
           <div className="flex flex-col items-center justify-center pt-5 pb-6">
             {!file ? (
               <>
-                <Upload className="w-8 h-8 mb-2 text-rose-500" />
+                <Upload className="w-8 h-8 mb-2 text-blue-500" />
                 <p className="mb-2 text-sm text-gray-500">
                   <span className="font-semibold">Click to upload</span> or drag and drop
                 </p>
@@ -173,7 +173,7 @@ export default function FileUpload({
                     />
                   </div>
                 ) : (
-                  <FileText className="w-8 h-8 mb-2 text-rose-500" />
+                  <FileText className="w-8 h-8 mb-2 text-blue-500" />
                 )}
                 <p className="text-sm text-gray-700 truncate max-w-xs">{file.name}</p>
               </div>
@@ -199,7 +199,7 @@ export default function FileUpload({
               type="button"
               onClick={handleUpload}
               disabled={uploading || disabled}
-              className="bg-rose-600 hover:bg-rose-700 flex-1"
+              className=" bg-blue-600:bg-blue-700 flex-1"
             >
               {uploading ? "Uploading..." : buttonText}
             </Button>

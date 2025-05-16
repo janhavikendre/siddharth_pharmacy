@@ -150,7 +150,7 @@ export default async function AdmissionPage() {
               )}
 
               {admissionFormFile && (
-                <Button asChild className="bg-rose-600 hover:bg-rose-700 flex items-center">
+                <Button asChild className=" bg-blue-600:bg-blue-700 flex items-center">
                   <a href={`/api/files/${admissionFormFile._id}`} target="_blank" rel="noopener noreferrer">
                     <Download className="h-4 w-4 mr-2" />
                     Download Application Form
@@ -343,7 +343,7 @@ export default async function AdmissionPage() {
               />
 
               {scholarshipFile && (
-                <Button asChild className="bg-rose-600 hover:bg-rose-700">
+                <Button asChild className=" bg-blue-600:bg-blue-700">
                   <a href={`/api/files/${scholarshipFile._id}`} target="_blank" rel="noopener noreferrer">
                     <FileText className="h-4 w-4 mr-2" />
                     Download Scholarship Details
@@ -392,7 +392,7 @@ export default async function AdmissionPage() {
               .map((file) => (
                 <Card key={file._id} className="hover:shadow-md transition-shadow">
                   <CardContent className="p-6 flex flex-col items-center text-center">
-                    <FileText className="h-12 w-12 text-rose-600 mb-4" />
+                    <FileText className="h-12 w-12 text-blue-600 mb-4" />
                     <h3 className="font-semibold mb-2">{file.filename}</h3>
                     <p className="text-sm text-gray-500 mb-4">{new Date(file.uploadDate).toLocaleDateString()}</p>
                     <Button asChild variant="outline" className="mt-auto">

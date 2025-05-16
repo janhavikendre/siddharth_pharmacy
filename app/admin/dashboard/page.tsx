@@ -85,22 +85,22 @@ export default function AdminDashboardPage() {
           <CardContent>
             <div className="space-y-4">
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-rose-500 rounded-full mr-2"></div>
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                 <p className="text-sm">Content updated: About Us page</p>
                 <span className="ml-auto text-xs text-gray-500">2h ago</span>
               </div>
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-rose-500 rounded-full mr-2"></div>
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                 <p className="text-sm">New announcement added</p>
                 <span className="ml-auto text-xs text-gray-500">5h ago</span>
               </div>
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-rose-500 rounded-full mr-2"></div>
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                 <p className="text-sm">Gallery updated: 5 new images</p>
                 <span className="ml-auto text-xs text-gray-500">Yesterday</span>
               </div>
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-rose-500 rounded-full mr-2"></div>
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                 <p className="text-sm">New faculty member added</p>
                 <span className="ml-auto text-xs text-gray-500">2 days ago</span>
               </div>
@@ -118,28 +118,28 @@ export default function AdminDashboardPage() {
                 href="/admin/dashboard/announcements/new"
                 className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <MessageSquare className="h-6 w-6 text-rose-500 mb-2" />
+                <MessageSquare className="h-6 w-6 text-blue-500 mb-2" />
                 <span className="text-sm text-center">Add Announcement</span>
               </a>
               <a
                 href="/admin/dashboard/gallery/upload"
                 className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <Image className="h-6 w-6 text-rose-500 mb-2" />
+                <Image className="h-6 w-6 text-blue-500 mb-2" />
                 <span className="text-sm text-center">Upload Images</span>
               </a>
               <a
                 href="/admin/dashboard/academics/admissions"
                 className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <FileText className="h-6 w-6 text-rose-500 mb-2" />
+                <FileText className="h-6 w-6 text-blue-500 mb-2" />
                 <span className="text-sm text-center">Update Admissions</span>
               </a>
               <a
                 href="/admin/dashboard/faculty/new"
                 className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <Users className="h-6 w-6 text-rose-500 mb-2" />
+                <Users className="h-6 w-6 text-blue-500 mb-2" />
                 <span className="text-sm text-center">Add Faculty</span>
               </a>
             </div>

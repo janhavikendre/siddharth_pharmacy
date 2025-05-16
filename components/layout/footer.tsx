@@ -91,11 +91,11 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-rose-400 mr-2 mt-0.5" />
-                <span className="text-gray-300">National Institute of Fashion Designing, Kasar Sirsi , Tq. Nilanga , Dist.Latur -413607</span>
+                <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
+                <span className="text-gray-300">Deshmukh College Of Pharmacy , Tq. Nilanga , Dist.Latur -413607</span>
               </li>
               <li className="flex items-center">
-                <Mail className="h-5 w-5 text-rose-400 mr-2" />
+                <Mail className="h-5 w-5 text-blue-400 mr-2" />
                 <a
                   href="mailto:523nationalinstitute@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
@@ -104,19 +104,19 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center">
-                <Phone className="h-5 w-5 text-rose-400 mr-2" />
+                <Phone className="h-5 w-5 text-blue-400 mr-2" />
                 <a href="tel:+919974469124" className="text-gray-300 hover:text-white transition-colors">
                   +91 9974469124
                 </a>
               </li>
               <li className="flex items-center">
-                <Phone className="h-5 w-5 text-rose-400 mr-2" />
+                <Phone className="h-5 w-5 text-blue-400 mr-2" />
                 <a href="tel:+918411888688" className="text-gray-300 hover:text-white transition-colors">
                   +91 8411888688
                 </a>
               </li>
               <li className="flex items-center">
-                <Clock className="h-5 w-5 text-rose-400 mr-2" />
+                <Clock className="h-5 w-5 text-blue-400 mr-2" />
                 <span className="text-gray-300">Mon-Sat: 9:00 AM - 5:00 PM</span>
               </li>
             </ul>
@@ -125,7 +125,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} National Institute of Fashion Designing, Kasar Sirsi. All rights reserved.
+            &copy; {new Date().getFullYear()} Deshmukh College Of Pharmacy. All rights reserved.
           </p>
         </div>
       </div>

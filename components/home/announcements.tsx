@@ -59,7 +59,7 @@ export default function Announcements({ announcements }: AnnouncementsProps) {
   }
 
   return (
-    <div className="bg-rose-600 text-white py-3 overflow-hidden">
+    <div className=" bg-blue-600text-white py-3 overflow-hidden">
       <div className="container mx-auto px-4 flex items-center">
         <div className="flex-shrink-0 flex items-center mr-4">
           <Megaphone className="h-5 w-5 mr-2" />

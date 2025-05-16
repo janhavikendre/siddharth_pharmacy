@@ -199,7 +199,7 @@ export default function NewCommitteePage() {
             <Button type="button" variant="outline" onClick={() => router.push("/admin/dashboard/committees")}>
               Cancel
             </Button>
-            <Button type="submit" className="bg-rose-600 hover:bg-rose-700" disabled={isSubmitting}>
+            <Button type="submit" className=" bg-blue-600:bg-blue-700" disabled={isSubmitting}>
               {isSubmitting ? "Creating..." : "Create Committee"}
             </Button>
           </CardFooter>

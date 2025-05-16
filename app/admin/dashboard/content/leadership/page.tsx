@@ -247,7 +247,7 @@ export default function LeadershipPage() {
           ))}
 
           <div className="flex justify-end">
-            <Button onClick={handleSave} className="bg-rose-600 hover:bg-rose-700" disabled={isSaving}>
+            <Button onClick={handleSave} className=" bg-blue-600:bg-blue-700" disabled={isSaving}>
               {isSaving ? "Saving..." : "Save All Leaders"}
             </Button>
           </div>
@@ -256,7 +256,7 @@ export default function LeadershipPage() {
         <Card>
           <CardContent className="text-center py-8">
             <p className="text-gray-500">No leadership profiles found</p>
-            <Button onClick={addLeader} className="mt-4 bg-rose-600 hover:bg-rose-700">
+            <Button onClick={addLeader} className="mt-4  bg-blue-600:bg-blue-700">
               Add Your First Leader
             </Button>
           </CardContent>

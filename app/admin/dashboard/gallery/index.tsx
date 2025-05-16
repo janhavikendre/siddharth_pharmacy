@@ -168,7 +168,7 @@ export default function GalleryPage() {
           <h1 className="text-3xl font-bold tracking-tight">Gallery</h1>
           <p className="text-gray-500">Manage gallery images</p>
         </div>
-        <Button asChild className="bg-rose-600 hover:bg-rose-700">
+        <Button asChild className=" bg-blue-600:bg-blue-700">
           <Link href="/admin/dashboard/gallery/categories/new">
             <Plus className="h-4 w-4 mr-2" /> Add Category
           </Link>

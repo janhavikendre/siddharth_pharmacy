@@ -45,7 +45,7 @@ export default async function ExamsPage() {
         <TabsContent value="info" className="mt-8">
           <Card>
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6 text-rose-800">Examination Guidelines</h2>
+              <h2 className="text-2xl font-bold mb-6 text-blue-800">Examination Guidelines</h2>
 
               {examInfo ? (
                 <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: examInfo }} />
@@ -57,14 +57,14 @@ export default async function ExamsPage() {
                     designed to assess theoretical knowledge as well as practical skills.
                   </p>
 
-                  <h3 className="text-xl font-bold mb-3 mt-6 text-rose-800">Examination Pattern</h3>
+                  <h3 className="text-xl font-bold mb-3 mt-6 text-blue-800">Examination Pattern</h3>
                   <p className="text-gray-700 mb-4">
                     Each course has both internal and external assessments. Internal assessments include class
                     assignments, projects, presentations, and mid-term tests. External assessments are conducted at the
                     end of each semester.
                   </p>
 
-                  <h3 className="text-xl font-bold mb-3 mt-6 text-rose-800">Evaluation Criteria</h3>
+                  <h3 className="text-xl font-bold mb-3 mt-6 text-blue-800">Evaluation Criteria</h3>
                   <p className="text-gray-700 mb-4">Students are evaluated based on the following criteria:</p>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
                     <li>Theory examinations - 40%</li>
@@ -73,7 +73,7 @@ export default async function ExamsPage() {
                     <li>Attendance and participation - 10%</li>
                   </ul>
 
-                  <h3 className="text-xl font-bold mb-3 mt-6 text-rose-800">Passing Criteria</h3>
+                  <h3 className="text-xl font-bold mb-3 mt-6 text-blue-800">Passing Criteria</h3>
                   <p className="text-gray-700 mb-4">
                     Students must score a minimum of 40% marks in each subject and 50% marks in aggregate to pass the
                     semester examination.
@@ -81,10 +81,10 @@ export default async function ExamsPage() {
                 </>
               )}
 
-              <div className="bg-rose-50 p-4 rounded-lg mt-8">
+              <div className="bg-blue-50 p-4 rounded-lg mt-8">
                 <div className="flex items-center mb-2">
-                  <Bell className="h-5 w-5 text-rose-600 mr-2" />
-                  <h4 className="font-semibold text-rose-800">Important Notes</h4>
+                  <Bell className="h-5 w-5 text-blue-600 mr-2" />
+                  <h4 className="font-semibold text-blue-800">Important Notes</h4>
                 </div>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
                   <li>Students must carry their ID cards to the examination hall.</li>
@@ -99,19 +99,19 @@ export default async function ExamsPage() {
         <TabsContent value="schedules" className="mt-8">
           <Card>
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6 text-rose-800">Examination Schedules</h2>
+              <h2 className="text-2xl font-bold mb-6 text-blue-800">Examination Schedules</h2>
 
               {schedules && schedules.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {schedules.map((schedule:any) => (
                     <Card key={schedule._id} className="hover:shadow-lg transition-shadow border-rose-100">
                       <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                        <Calendar className="h-10 w-10 text-rose-600 mb-3" />
-                        <h3 className="font-semibold mb-2 text-rose-800">{schedule.title}</h3>
+                        <Calendar className="h-10 w-10 text-blue-600 mb-3" />
+                        <h3 className="font-semibold mb-2 text-blue-800">{schedule.title}</h3>
                         <p className="text-sm text-gray-500 mb-6">
                           Added on {new Date(schedule.createdAt).toLocaleDateString()}
                         </p>
-                        <Button asChild className="mt-auto bg-rose-600 hover:bg-rose-700">
+                        <Button asChild className="mt-auto  bg-blue-600:bg-blue-700">
                           <a href={`/api/files/${schedule.fileId}`} target="_blank" rel="noopener noreferrer">
                             <Download className="h-4 w-4 mr-2" /> Download Schedule
                           </a>
@@ -131,7 +131,7 @@ export default async function ExamsPage() {
               )}
 
               <div className="mt-8 p-4 border border-gray-200 rounded-lg">
-                <h3 className="font-semibold text-rose-800 mb-2">Contact Information</h3>
+                <h3 className="font-semibold text-blue-800 mb-2">Contact Information</h3>
                 <p className="text-gray-700">
                   For any queries regarding examination schedules, please contact the Examination Cell:
                 </p>
@@ -148,19 +148,19 @@ export default async function ExamsPage() {
         <TabsContent value="results" className="mt-8">
           <Card>
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6 text-rose-800">Examination Results</h2>
+              <h2 className="text-2xl font-bold mb-6 text-blue-800">Examination Results</h2>
 
               {results && results.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {results.map((result:any) => (
                     <Card key={result._id} className="hover:shadow-lg transition-shadow border-rose-100">
                       <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                        <FileText className="h-10 w-10 text-rose-600 mb-3" />
-                        <h3 className="font-semibold mb-2 text-rose-800">{result.title}</h3>
+                        <FileText className="h-10 w-10 text-blue-600 mb-3" />
+                        <h3 className="font-semibold mb-2 text-blue-800">{result.title}</h3>
                         <p className="text-sm text-gray-500 mb-6">
                           Published on {new Date(result.createdAt).toLocaleDateString()}
                         </p>
-                        <Button asChild className="mt-auto bg-rose-600 hover:bg-rose-700">
+                        <Button asChild className="mt-auto  bg-blue-600:bg-blue-700">
                           <a href={`/api/files/${result.fileId}`} target="_blank" rel="noopener noreferrer">
                             <Download className="h-4 w-4 mr-2" /> Download Result
                           </a>
@@ -179,8 +179,8 @@ export default async function ExamsPage() {
                 </div>
               )}
 
-              <div className="mt-8 bg-rose-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-rose-800 mb-2">Result Verification</h3>
+              <div className="mt-8 bg-blue-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-blue-800 mb-2">Result Verification</h3>
                 <p className="text-gray-700 mb-3">
                   If you need to verify your results or have any discrepancies, please visit the Examination Cell with
                   your ID card and examination hall ticket within 7 days of result declaration.

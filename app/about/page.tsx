@@ -58,7 +58,7 @@ const LeadershipMessage = ({ leader, title }: { leader: Leader | undefined, titl
               className="object-cover"
             />
           </div>
-          <h3 className="text-lg font-bold text-rose-800">{`${title}'s Message`}</h3>
+          <h3 className="text-lg font-bold text-blue-800">{`${title}'s Message`}</h3>
           <p className="text-sm text-gray-500">{leader?.name || title}</p>
         </div>
         <div
@@ -70,7 +70,7 @@ const LeadershipMessage = ({ leader, title }: { leader: Leader | undefined, titl
   )
 }
 
-export default async function AboutPage() {
+export default async function AboutPage({ searchParams }: { searchParams: { section?: string } }) {
   const { about, directors, leadership } = await getAboutContent()
 
   // Find leaders by their roles, case-insensitive
@@ -81,11 +81,20 @@ export default async function AboutPage() {
   const secretaryMessage = getLeaderByRole("Secretary")
   const principalMessage = getLeaderByRole("Principal")
 
+  const section =
+    searchParams.section === "society"
+      ? "society"
+      : searchParams.section === "vision"
+      ? "vision"
+      : searchParams.section === "directors"
+      ? "directors"
+      : "institute"
+
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-center mb-12">About Us</h1>
 
-      <AboutTabs about={about} directors={directors} leadership={leadership} />
+      <AboutTabs about={about} directors={directors} leadership={leadership} section={section} />
 
       <section className="mb-12 mt-16">
         <h2 className="text-2xl font-bold text-center mb-8">Messages from Leadership</h2>

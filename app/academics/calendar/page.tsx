@@ -25,7 +25,7 @@ export default async function AcademicCalendarPage() {
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <div>
-          <h2 className="text-2xl font-bold mb-4 text-rose-800">Academic Year 2024-25</h2>
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">Academic Year 2024-25</h2>
           <p className="text-gray-700 mb-6">
             The academic calendar provides important dates and schedules for the academic year, including:
           </p>
@@ -56,15 +56,15 @@ export default async function AcademicCalendarPage() {
           {calendars.map((calendar:any) => (
             <Card key={calendar._id} className="hover:shadow-lg transition-shadow border-rose-100">
               <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                <Calendar className="h-12 w-12 text-rose-600 mb-4" />
-                <h3 className="font-semibold mb-2 text-rose-800">{calendar.title}</h3>
+                <Calendar className="h-12 w-12 text-blue-600 mb-4" />
+                <h3 className="font-semibold mb-2 text-blue-800">{calendar.title}</h3>
                 {calendar.academicYear && (
                   <p className="text-sm text-gray-500 mb-4">Academic Year: {calendar.academicYear}</p>
                 )}
                 <p className="text-sm text-gray-500 mb-6">
                   Added on {new Date(calendar.createdAt).toLocaleDateString()}
                 </p>
-                <Button asChild className="mt-auto bg-rose-600 hover:bg-rose-700">
+                <Button asChild className="mt-auto  bg-blue-600:bg-blue-700">
                   <a href={`/api/files/${calendar.fileId}`} target="_blank" rel="noopener noreferrer">
                     <Download className="h-4 w-4 mr-2" /> Download Calendar
                   </a>
@@ -87,8 +87,8 @@ export default async function AcademicCalendarPage() {
         <Card className="flex-1 hover:shadow-lg transition-shadow border-rose-100">
           <CardContent className="p-6">
             <div className="flex items-center mb-4">
-              <Info className="h-5 w-5 text-rose-600 mr-2" />
-              <h3 className="font-semibold text-rose-800">Important Notice</h3>
+              <Info className="h-5 w-5 text-blue-600 mr-2" />
+              <h3 className="font-semibold text-blue-800">Important Notice</h3>
             </div>
             <p className="text-gray-700 mb-4">
               The academic calendar is subject to change. Any changes will be communicated through official channels and
@@ -100,8 +100,8 @@ export default async function AcademicCalendarPage() {
         <Card className="flex-1 hover:shadow-lg transition-shadow border-rose-100">
           <CardContent className="p-6">
             <div className="flex items-center mb-4">
-              <Info className="h-5 w-5 text-rose-600 mr-2" />
-              <h3 className="font-semibold text-rose-800">Contact Information</h3>
+              <Info className="h-5 w-5 text-blue-600 mr-2" />
+              <h3 className="font-semibold text-blue-800">Contact Information</h3>
             </div>
             <p className="text-gray-700 mb-4">
               For any queries regarding the academic calendar, please contact the Academic Office:

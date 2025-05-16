@@ -80,7 +80,7 @@ export default function FacultyPage() {
           <h1 className="text-3xl font-bold tracking-tight">Faculty & Staff</h1>
           <p className="text-gray-500">Manage faculty and staff members</p>
         </div>
-        <Button asChild className="bg-rose-600 hover:bg-rose-700">
+        <Button asChild className=" bg-blue-600:bg-blue-700">
           <Link href="/admin/dashboard/faculty/new">
             <Plus className="h-4 w-4 mr-2" /> Add Faculty
           </Link>
@@ -107,7 +107,7 @@ export default function FacultyPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-medium">{member.name}</h3>
-                    <p className="text-sm text-rose-600">{member.designation}</p>
+                    <p className="text-sm text-blue-600">{member.designation}</p>
                     <p className="text-xs text-gray-500">{member.department}</p>
                     <div className="flex mt-2 space-x-2">
                       <Button variant="outline" size="icon" asChild className="h-7 w-7">
@@ -133,7 +133,7 @@ export default function FacultyPage() {
           ) : (
             <div className="text-center py-8">
               <p className="text-gray-500">No faculty or staff members found</p>
-              <Button asChild className="mt-4 bg-rose-600 hover:bg-rose-700">
+              <Button asChild className="mt-4  bg-blue-600:bg-blue-700">
                 <Link href="/admin/dashboard/faculty/new">Add your first faculty member</Link>
               </Button>
             </div>

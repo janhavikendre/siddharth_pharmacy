@@ -25,7 +25,7 @@ export default async function SyllabusPage() {
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <div>
-          <h2 className="text-2xl font-bold mb-4 text-rose-800">Program Syllabus</h2>
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">Program Syllabus</h2>
           <p className="text-gray-700 mb-6">
             Find detailed syllabus for all programs offered at the National Institute of Fashion Designing. These
             documents outline the course structure, subjects, credit distribution, and learning outcomes for each
@@ -51,11 +51,11 @@ export default async function SyllabusPage() {
           {syllabusFiles.map((file:any) => (
             <Card key={file._id} className="hover:shadow-lg transition-shadow border-rose-100">
               <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                <FileText className="h-12 w-12 text-rose-600 mb-4" />
-                <h3 className="font-semibold mb-2 text-rose-800">{file.title}</h3>
+                <FileText className="h-12 w-12 text-blue-600 mb-4" />
+                <h3 className="font-semibold mb-2 text-blue-800">{file.title}</h3>
                 {file.program && <p className="text-sm text-gray-500 mb-4">{file.program}</p>}
                 <p className="text-sm text-gray-500 mb-6">Added on {new Date(file.createdAt).toLocaleDateString()}</p>
-                <Button asChild className="mt-auto bg-rose-600 hover:bg-rose-700">
+                <Button asChild className="mt-auto  bg-blue-600:bg-blue-700">
                   <a href={`/api/files/${file.fileId}`} target="_blank" rel="noopener noreferrer">
                     <Download className="h-4 w-4 mr-2" /> Download Syllabus
                   </a>
@@ -72,8 +72,8 @@ export default async function SyllabusPage() {
         </div>
       )}
 
-      <div className="mt-12 bg-rose-50 p-6 rounded-lg">
-        <h2 className="text-xl font-bold mb-4 text-rose-800">Need Help?</h2>
+      <div className="mt-12 bg-blue-50 p-6 rounded-lg">
+        <h2 className="text-xl font-bold mb-4 text-blue-800">Need Help?</h2>
         <p className="text-gray-700 mb-4">
           If you have any questions about the syllabus or need additional information about our academic programs,
           please contact the Academic Office.

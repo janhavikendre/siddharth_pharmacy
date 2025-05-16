@@ -278,7 +278,7 @@ export default function ExamsPage() {
               </div>
 
               <div className="flex justify-end">
-                <Button onClick={handleSaveExamInfo} className="bg-rose-600 hover:bg-rose-700" disabled={isSaving}>
+                <Button onClick={handleSaveExamInfo} className=" bg-blue-600:bg-blue-700" disabled={isSaving}>
                   {isSaving ? "Saving..." : "Save Information"}
                 </Button>
               </div>

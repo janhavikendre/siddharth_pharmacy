@@ -221,7 +221,7 @@ export default function NewFacultyPage() {
             <Button type="button" variant="outline" onClick={() => router.push("/admin/dashboard/faculty")}>
               Cancel
             </Button>
-            <Button type="submit" className="bg-rose-600 hover:bg-rose-700" disabled={isSubmitting}>
+            <Button type="submit" className=" bg-blue-600:bg-blue-700" disabled={isSubmitting}>
               {isSubmitting ? "Adding..." : "Add Faculty Member"}
             </Button>
           </CardFooter>
