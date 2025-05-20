@@ -338,7 +338,7 @@ export default async function AdmissionPage() {
                 dangerouslySetInnerHTML={{
                   __html:
                     content.scholarship ||
-                    "The National Institute of Fashion Designing offers various scholarships to meritorious students and those from economically weaker sections. These scholarships are designed to support talented students in pursuing their education without financial constraints.",
+                    "The Deshmukh College Of Pharmacy offers various scholarships to meritorious students and those from economically weaker sections. These scholarships are designed to support talented students in pursuing their education without financial constraints.",
                 }}
               />
 

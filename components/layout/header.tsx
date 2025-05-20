@@ -23,6 +23,7 @@ const aboutOptions = [
   { label: "About Society", value: "society" },
   { label: "Vision & Mission", value: "vision" },
   { label: "Directors", value: "directors" },
+  { label: "Leadership", value: "leadership" },
 ]
 
 const committeesOptions = [

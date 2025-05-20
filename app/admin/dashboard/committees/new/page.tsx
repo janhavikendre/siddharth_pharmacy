@@ -144,7 +144,7 @@ export default function NewCommitteePage() {
                       variant="ghost"
                       size="sm"
                       onClick={() => removeMember(index)}
-                      className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                      className="text-blue-500 hover:text-blue-700 hover:bg-blue-50"
                     >
                       <Trash2 className="h-4 w-4" />
                     </Button>

@@ -208,7 +208,7 @@ export default function EditLibraryResourcePage() {
                       variant="ghost"
                       size="sm"
                       onClick={() => removeItem(index)}
-                      className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                      className="text-blue-500 hover:text-blue-700 hover:bg-blue-50"
                       disabled={items.length === 1}
                     >
                       <Trash2 className="h-4 w-4" />

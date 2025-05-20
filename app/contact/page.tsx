@@ -109,7 +109,7 @@ export default function ContactPage() {
             <div>
               <h3 className="font-semibold mb-2">Our Address</h3>
               <p className="text-gray-700">
-                National Institute of Fashion Designing,
+                Deshmukh College Of Pharmacy,
                 <br />
                 Kasar Sirsi,
                 <br />

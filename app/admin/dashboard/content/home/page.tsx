@@ -268,7 +268,7 @@ export default function HomeContentPage() {
                           variant="ghost"
                           size="sm"
                           onClick={() => removeSlide(index)}
-                          className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                          className="text-blue-500 hover:text-blue-700 hover:bg-blue-50"
                           disabled={slides.length === 1}
                         >
                           <Trash2 className="h-4 w-4" />
@@ -387,7 +387,7 @@ export default function HomeContentPage() {
                           variant="ghost"
                           size="sm"
                           onClick={() => removeHighlight(index)}
-                          className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                          className="text-blue-500 hover:text-blue-700 hover:bg-blue-50"
                           disabled={highlights.length === 1}
                         >
                           <Trash2 className="h-4 w-4" />
@@ -485,7 +485,7 @@ export default function HomeContentPage() {
                         variant="ghost"
                         size="icon"
                         onClick={() => removeReason(index)}
-                        className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                        className="text-blue-500 hover:text-blue-700 hover:bg-blue-50"
                         disabled={reasons.length === 1}
                       >
                         <Trash2 className="h-4 w-4" />

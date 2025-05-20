@@ -172,7 +172,7 @@ export default function AcademicsPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Our Faculty</h3>
                   <p className="text-gray-600 mb-4">
-                    The National Institute of Fashion Designing boasts a team of highly qualified and experienced
+                    The Deshmukh College Of Pharmacy boasts a team of highly qualified and experienced
                     faculty members who are experts in their respective fields. Our faculty includes industry
                     professionals, designers, and academics who bring a wealth of knowledge and practical experience to
                     the classroom.

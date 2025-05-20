@@ -9,6 +9,7 @@ interface AboutContent extends WithId<Document> {
   society: string
   vision?: string
   mission?: string
+
 }
 
 interface Leader extends WithId<Document> {
@@ -73,14 +74,6 @@ const LeadershipMessage = ({ leader, title }: { leader: Leader | undefined, titl
 export default async function AboutPage({ searchParams }: { searchParams: { section?: string } }) {
   const { about, directors, leadership } = await getAboutContent()
 
-  // Find leaders by their roles, case-insensitive
-  const getLeaderByRole = (role: string) => 
-    leadership.find(l => l.role.toLowerCase() === role.toLowerCase())
-
-  const chairmanMessage = getLeaderByRole("Chairman")
-  const secretaryMessage = getLeaderByRole("Secretary")
-  const principalMessage = getLeaderByRole("Principal")
-
   const section =
     searchParams.section === "society"
       ? "society"
@@ -88,23 +81,14 @@ export default async function AboutPage({ searchParams }: { searchParams: { sect
       ? "vision"
       : searchParams.section === "directors"
       ? "directors"
+      : searchParams.section === "leadership"
+      ? "leadership"
       : "institute"
 
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-center mb-12">About Us</h1>
-
       <AboutTabs about={about} directors={directors} leadership={leadership} section={section} />
-
-      <section className="mb-12 mt-16">
-        <h2 className="text-2xl font-bold text-center mb-8">Messages from Leadership</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <LeadershipMessage leader={chairmanMessage} title="Chairman" />
-          <LeadershipMessage leader={secretaryMessage} title="Secretary" />
-          <LeadershipMessage leader={principalMessage} title="Principal" />
-        </div>
-      </section>
     </div>
   )
 }

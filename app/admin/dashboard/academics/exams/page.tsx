@@ -344,7 +344,7 @@ export default function ExamsPage() {
                         </a>
                         <button
                           onClick={() => handleDeleteSchedule(schedule._id)}
-                          className="px-3 py-1 text-sm text-red-600 bg-red-50 hover:bg-red-100 rounded-md transition-colors"
+                          className="px-3 py-1 text-sm text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors"
                         >
                           <Trash2 className="h-4 w-4" />
                         </button>
@@ -420,7 +420,7 @@ export default function ExamsPage() {
                         </a>
                         <button
                           onClick={() => handleDeleteResult(result._id)}
-                          className="px-3 py-1 text-sm text-red-600 bg-red-50 hover:bg-red-100 rounded-md transition-colors"
+                          className="px-3 py-1 text-sm text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors"
                         >
                           <Trash2 className="h-4 w-4" />
                         </button>

@@ -58,7 +58,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: { ca
             ) : (
               <>
                 <p>
-                  The National Institute of Fashion Designing library is a comprehensive resource center for fashion
+                  The Deshmukh College Of Pharmacy library is a comprehensive resource center for fashion
                   design students and faculty. Our library houses an extensive collection of books, journals, magazines,
                   digital resources, and archives related to fashion design, textile science, fashion history, and
                   industry practices.

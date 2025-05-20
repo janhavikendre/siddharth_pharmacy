@@ -52,7 +52,7 @@ export default async function ExamsPage() {
               ) : (
                 <>
                   <p className="text-gray-700 mb-4">
-                    The National Institute of Fashion Designing conducts examinations to evaluate students'
+                    The Deshmukh College Of Pharmacy conducts examinations to evaluate students'
                     understanding and application of concepts taught during the academic term. These examinations are
                     designed to assess theoretical knowledge as well as practical skills.
                   </p>

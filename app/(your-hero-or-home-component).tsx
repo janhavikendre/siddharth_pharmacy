@@ -1,6 +1,5 @@
 // ...existing imports...
 import { useState } from "react"
-// If using keen-slider or swiper, import here
 
 const sliderImages = [
   "/images/slide1.jpg",
@@ -18,7 +17,7 @@ export default function HeroSection() {
   // }, [])
 
   return (
-    <section className="w-full h-[500px] flex">
+    <section className="w-full h-[500px] flex flex-col md:flex-row">
       {/* Left static part */}
       <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-12 bg-blue-900 text-white relative z-10">
         {/* ...existing static content... */}
@@ -33,12 +32,14 @@ export default function HeroSection() {
         {/* ...any other static elements... */}
       </div>
       {/* Right slider part */}
-      <div className="w-1/2 h-full relative overflow-hidden">
-        <img
-          src={sliderImages[current]}
-          alt="Slider"
-          className="w-full h-full object-cover transition-all duration-700"
-        />
+      <div className="w-full md:w-1/2 relative overflow-hidden">
+        <div className="w-full h-[220px] sm:h-[300px] md:h-[500px]">
+          <img
+            src={sliderImages[current]}
+            alt="Slider"
+            className="w-full h-full object-cover transition-all duration-700"
+          />
+        </div>
         {/* Optional: Add navigation arrows or dots */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
           {sliderImages.map((_, idx) => (

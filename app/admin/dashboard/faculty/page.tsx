@@ -119,7 +119,7 @@ export default function FacultyPage() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-7 w-7 text-red-500 hover:text-red-600 hover:bg-red-50"
+                        className="h-7 w-7 text-blue-500 hover:text-blue-600 hover:bg-blue-50"
                         onClick={() => handleDelete(member._id)}
                       >
                         <Trash2 className="h-3 w-3" />
