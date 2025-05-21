@@ -3,12 +3,9 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
 import { useToast } from "@/components/ui/use-toast"
 
-export function GalleryContent() {
+export function GalleryContent({ selectedCategory }: { selectedCategory?: string }) {
   const [categories, setCategories] = useState<any[]>([])
   const [activeCategory, setActiveCategory] = useState<string>("")
   const [images, setImages] = useState<any[]>([])
@@ -23,7 +20,12 @@ export function GalleryContent() {
           const data = await response.json()
           if (data.success && data.data.length > 0) {
             setCategories(data.data)
-            setActiveCategory(data.data[0]._id)
+            // If selectedCategory is present, use it, else default to first
+            setActiveCategory(
+              selectedCategory
+                ? data.data.find((cat: any) => cat._id === selectedCategory)?.['_id'] || data.data[0]._id
+                : data.data[0]._id
+            )
           } else {
             setIsLoading(false)
           }
@@ -42,7 +44,7 @@ export function GalleryContent() {
     }
 
     fetchCategories()
-  }, [toast])
+  }, [toast, selectedCategory])
 
   useEffect(() => {
     if (activeCategory) {
@@ -90,24 +92,7 @@ export function GalleryContent() {
 
   return (
     <div className="space-y-8">
-      <div className="flex justify-center">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="border-rose-200 bg-blue-50 hover:text-blue-100">
-              {currentCategory?.name || "Select Category"}
-              <ChevronDown className="ml-2 h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="center" className="w-56">
-            {categories.map((category) => (
-              <DropdownMenuItem key={category._id} onClick={() => setActiveCategory(category._id)}>
-                {category.name}
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
-
+      {/* No dropdown here, category is selected via prop */}
       {isLoading ? (
         <div className="flex justify-center items-center py-12">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600"></div>

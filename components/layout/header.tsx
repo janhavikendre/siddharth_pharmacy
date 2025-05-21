@@ -44,6 +44,14 @@ const libraryOptions = [
   { label: "Fashion Archives", value: "archives" },
 ]
 
+const galleryOptions = [
+  { label: "Annual Events", value: "annual-events" },
+  { label: "Workshops", value: "workshops" },
+  { label: "Fashion Shows", value: "fashion-shows" },
+  { label: "Campus Life", value: "campus-life" },
+  { label: "Student Work", value: "student-work" },
+]
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -169,6 +177,27 @@ export default function Header() {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+            ) : item.name === "Gallery" ? (
+              <DropdownMenu key={item.name}>
+                <DropdownMenuTrigger asChild>
+                  <button className="text-sm font-semibold text-[#1a237e] hover:text-blue-500 transition-colors flex items-center">
+                    {item.name}
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {galleryOptions.map((opt) => (
+                    <DropdownMenuItem
+                      key={opt.value}
+                      onClick={() => {
+                        window.location.href = `/gallery?category=${opt.value}`
+                      }}
+                    >
+                      {opt.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             ) : (
               <Link
                 key={item.name}
@@ -258,6 +287,22 @@ export default function Header() {
                           opt.value === "books"
                             ? "/library"
                             : `/library?category=${opt.value}`
+                      }}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              ) : item.name === "Gallery" ? (
+                <div key={item.name} className="space-y-1">
+                  <div className="font-semibold text-[#1a237e]">Gallery</div>
+                  {galleryOptions.map((opt) => (
+                    <button
+                      key={opt.value}
+                      className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      onClick={() => {
+                        setMobileMenuOpen(false)
+                        window.location.href = `/gallery?category=${opt.value}`
                       }}
                     >
                       {opt.label}

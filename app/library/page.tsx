@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
 import clientPromise from "@/lib/mongodb"
+import Image from "next/image"
 
 async function getLibraryContent() {
   try {
@@ -23,6 +24,31 @@ async function getLibraryContent() {
       resources: [],
     }
   }
+}
+
+function SectionHero({ title, bgImage }: { title: string; bgImage?: string }) {
+  return (
+    <div className="relative w-full h-40 md:h-56 flex items-center justify-center">
+      {bgImage && (
+        <Image
+          src={bgImage}
+          alt={title}
+          fill
+          className="object-cover"
+          style={{ zIndex: 0 }}
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 to-green-400/80" style={{ zIndex: 1 }} />
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+        <h1 className="text-2xl md:text-4xl font-bold text-white text-center drop-shadow-lg py-8">
+          {title}
+        </h1>
+      </div>
+      <svg className="absolute bottom-0 left-0 w-full" height="32" viewBox="0 0 100 10" preserveAspectRatio="none" style={{ zIndex: 2 }}>
+        <polygon points="0,10 100,0 100,10" fill="white" />
+      </svg>
+    </div>
+  )
 }
 
 export default async function LibraryPage({ searchParams }: { searchParams: { category?: string } }) {
@@ -46,79 +72,82 @@ export default async function LibraryPage({ searchParams }: { searchParams: { ca
       : "books" // default to books
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center mb-12">Library & Resources</h1>
+    <>
+      <SectionHero title="Library & Resources" bgImage="/about.avif" />
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold text-center mb-12">Library & Resources</h1>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div>
-          <h2 className="text-2xl font-bold mb-4 text-blue-800">About Our Library</h2>
-          <div className="prose max-w-none">
-            {content.about ? (
-              <div dangerouslySetInnerHTML={{ __html: content.about }} />
-            ) : (
-              <>
-                <p>
-                  The Deshmukh College Of Pharmacy library is a comprehensive resource center for fashion
-                  design students and faculty. Our library houses an extensive collection of books, journals, magazines,
-                  digital resources, and archives related to fashion design, textile science, fashion history, and
-                  industry practices.
-                </p>
-                <p>
-                  Our mission is to provide students with access to quality resources that enhance their learning
-                  experience and support their academic and creative endeavors. The library is continuously updated with
-                  the latest publications and digital resources to keep pace with the evolving fashion industry.
-                </p>
-              </>
-            )}
-          </div>
-
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold mb-2 text-blue-700">Library Hours</h3>
-            <ul className="space-y-1">
-              {content.hours ? (
-                <div dangerouslySetInnerHTML={{ __html: content.hours }} />
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 className="text-2xl font-bold mb-4 text-blue-800">About Our Library</h2>
+            <div className="prose max-w-none">
+              {content.about ? (
+                <div dangerouslySetInnerHTML={{ __html: content.about }} />
               ) : (
                 <>
-                  <li className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
-                  </li>
+                  <p>
+                    The Deshmukh College Of Pharmacy library is a comprehensive resource center for fashion
+                    design students and faculty. Our library houses an extensive collection of books, journals, magazines,
+                    digital resources, and archives related to fashion design, textile science, fashion history, and
+                    industry practices.
+                  </p>
+                  <p>
+                    Our mission is to provide students with access to quality resources that enhance their learning
+                    experience and support their academic and creative endeavors. The library is continuously updated with
+                    the latest publications and digital resources to keep pace with the evolving fashion industry.
+                  </p>
                 </>
               )}
-            </ul>
+            </div>
+
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold mb-2 text-blue-700">Library Hours</h3>
+              <ul className="space-y-1">
+                {content.hours ? (
+                  <div dangerouslySetInnerHTML={{ __html: content.hours }} />
+                ) : (
+                  <>
+                    <li className="flex justify-between">
+                      <span>Monday - Friday</span>
+                      <span>9:00 AM - 6:00 PM</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Saturday</span>
+                      <span>10:00 AM - 4:00 PM</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Sunday</span>
+                      <span>Closed</span>
+                    </li>
+                  </>
+                )}
+              </ul>
+            </div>
           </div>
         </div>
+
+        <Card className="mb-12 overflow-hidden border-rose-100 hover:shadow-lg transition-shadow">
+          <CardContent className="p-6">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-shrink-0 text-blue-100 p-4 rounded-full">
+                <Search className="h-8 w-8 text-blue-600" />
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-2 text-blue-800">Online Catalog</h2>
+                <p className="text-gray-700 mb-4">
+                  Search our online catalog to find books, journals, and other resources available in our library. You can
+                  check availability, place holds, and renew borrowed items through our online system.
+                </p>
+                <Button className=" bg-blue-600:bg-blue-700">Access Online Catalog</Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <h2 className="text-2xl font-bold mb-6 text-blue-800">Library Resources</h2>
+
+        <LibraryTabs resources={groupedResources} category={category} />
       </div>
-
-      <Card className="mb-12 overflow-hidden border-rose-100 hover:shadow-lg transition-shadow">
-        <CardContent className="p-6">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex-shrink-0 text-blue-100 p-4 rounded-full">
-              <Search className="h-8 w-8 text-blue-600" />
-            </div>
-            <div>
-              <h2 className="text-xl font-bold mb-2 text-blue-800">Online Catalog</h2>
-              <p className="text-gray-700 mb-4">
-                Search our online catalog to find books, journals, and other resources available in our library. You can
-                check availability, place holds, and renew borrowed items through our online system.
-              </p>
-              <Button className=" bg-blue-600:bg-blue-700">Access Online Catalog</Button>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <h2 className="text-2xl font-bold mb-6 text-blue-800">Library Resources</h2>
-
-      <LibraryTabs resources={groupedResources} category={category} />
-    </div>
+    </>
   )
 }
