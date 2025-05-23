@@ -36,42 +36,42 @@ export default function ContactPage() {
     <>
       <SectionHero title="Contact Us" bgImage="/about.avif" />
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-center mb-12">Contact Us</h1>
+        <h1 className="text-3xl font-bold text-center mb-12 text-blue-800">Contact Us</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <Card className="hover:shadow-md transition-shadow">
+          <Card className="hover:shadow-lg transition-shadow border-blue-100">
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="text-blue-100 p-3 rounded-full mb-4">
-                <Mail className="h-6 w-6 text-blue-600" />
+              <div className="text-white bg-blue-600 p-3 rounded-full mb-4 shadow-md">
+                <Mail className="h-6 w-6" />
               </div>
-              <h3 className="font-semibold mb-2">Email</h3>
-              <a href="mailto:523nationalinstitute@gmail.com" className="text-blue-600 hover:underline">
-                523nationalinstitute@gmail.com
+              <h3 className="font-semibold mb-2 text-blue-800">Email</h3>
+              <a href="mailto:deshmukhpharmacy2022@gmail.com" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">
+                deshmukhpharmacy2022@gmail.com
               </a>
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-md transition-shadow">
+          <Card className="hover:shadow-lg transition-shadow border-blue-100">
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="text-blue-100 p-3 rounded-full mb-4">
-                <Phone className="h-6 w-6 text-blue-600" />
+              <div className="text-white bg-blue-600 p-3 rounded-full mb-4 shadow-md">
+                <Phone className="h-6 w-6" />
               </div>
-              <h3 className="font-semibold mb-2">Phone</h3>
-              <a href="tel:+919974469124" className="text-blue-600 hover:underline">
-                +91 9974469124
+              <h3 className="font-semibold mb-2 text-blue-800">Phone</h3>
+              <a href="tel:+919975469123" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">
+                +91 9975469123
               </a>
-              <a href="tel:+918411888688" className="text-blue-600 hover:underline mt-1">
+              <a href="tel:+918411888688" className="text-blue-600 hover:text-blue-700 hover:underline mt-1 transition-colors">
                 +91 8411888688
               </a>
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-md transition-shadow">
+          <Card className="hover:shadow-lg transition-shadow border-blue-100">
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="text-blue-100 p-3 rounded-full mb-4">
-                <Clock className="h-6 w-6 text-blue-600" />
+              <div className="text-white bg-blue-600 p-3 rounded-full mb-4 shadow-md">
+                <Clock className="h-6 w-6" />
               </div>
-              <h3 className="font-semibold mb-2">Working Hours</h3>
+              <h3 className="font-semibold mb-2 text-blue-800">Working Hours</h3>
               <p className="text-gray-700">Monday - Saturday</p>
               <p className="text-gray-700">9:00 AM - 5:00 PM</p>
             </CardContent>
@@ -79,40 +79,65 @@ export default function ContactPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <Card>
+          <Card className="border-blue-100 shadow-lg">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold mb-6 text-blue-800">Send Us a Message</h2>
 
               <form className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input id="name" placeholder="Enter your name" required />
+                    <Label htmlFor="name" className="text-blue-700 font-medium">Your Name</Label>
+                    <Input 
+                      id="name" 
+                      placeholder="Enter your name" 
+                      required 
+                      className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                    />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="Enter your email" required />
+                    <Label htmlFor="email" className="text-blue-700 font-medium">Email Address</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="Enter your email" 
+                      required 
+                      className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                    />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="Enter subject" required />
+                  <Label htmlFor="subject" className="text-blue-700 font-medium">Subject</Label>
+                  <Input 
+                    id="subject" 
+                    placeholder="Enter subject" 
+                    required 
+                    className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                  />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Enter your message" rows={5} required />
+                  <Label htmlFor="message" className="text-blue-700 font-medium">Message</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Enter your message" 
+                    rows={5} 
+                    required 
+                    className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                  />
                 </div>
 
-                <Button type="submit" className=" bg-blue-600:bg-blue-700 w-full md:w-auto">
+                <Button 
+                  type="submit" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white w-full md:w-auto px-8 py-2 transition-colors shadow-md"
+                >
                   Send Message
                 </Button>
               </form>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-blue-100 shadow-lg overflow-hidden">
             <CardContent className="p-0">
               <div className="h-full min-h-[300px]">
                 <iframe
@@ -130,16 +155,20 @@ export default function ContactPage() {
           </Card>
         </div>
 
-        <Card>
+        <Card className="border-blue-100 shadow-lg">
           <CardContent className="p-6">
             <div className="flex items-start">
-              <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-1" />
+              <div className="text-white bg-blue-600 p-2 rounded-full mr-4 mt-1">
+                <MapPin className="h-5 w-5" />
+              </div>
               <div>
-                <h3 className="font-semibold mb-2">Our Address</h3>
-                <p className="text-gray-700">
+                <h3 className="font-semibold mb-2 text-blue-800 text-lg">Our Address</h3>
+                <p className="text-gray-700 leading-relaxed">
                   Deshmukh College Of Pharmacy,
                   <br />
-                  Kasar Sirsi,
+                  Kasar Sirsi 413607,
+                  <br />
+                  Tq. Nilanga, Dist. Latur
                   <br />
                   Affiliated to S.N.D.T.W University, Mumbai
                 </p>
