@@ -17,7 +17,7 @@ export default function NewGalleryCategoryPage() {
   const router = useRouter()
   const { toast } = useToast()
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault()
     setIsSubmitting(true)
 
@@ -53,7 +53,7 @@ export default function NewGalleryCategoryPage() {
     } catch (error) {
       toast({
         title: "Error",
-        description: error.message || "An error occurred",
+        description: error instanceof Error ? error.message : "An error occurred",
         variant: "destructive",
       })
     } finally {

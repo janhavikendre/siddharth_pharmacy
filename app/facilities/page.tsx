@@ -94,7 +94,7 @@ export default async function FacilitiesPage() {
                           <div className="mt-6">
                             <h3 className="text-lg font-semibold mb-2 text-blue-700">Features:</h3>
                             <ul className="list-disc pl-5 space-y-1 text-gray-600">
-                              {facility.features.map((feature, index) => (
+                              {facility.features.map((feature:any, index:any) => (
                                 <li key={index}>{feature}</li>
                               ))}
                             </ul>
@@ -107,7 +107,7 @@ export default async function FacilitiesPage() {
                       <div className="mt-8">
                         <h3 className="text-lg font-semibold mb-4 text-blue-700">More Images</h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                          {facility.images.slice(1).map((image, index) => (
+                          {facility.images.slice(1).map((image:any, index:any) => (
                             <div key={index} className="relative h-40 rounded-lg overflow-hidden border border-blue-100">
                               <Image
                                 src={image || "/placeholder.svg"}

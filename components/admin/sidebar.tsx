@@ -118,6 +118,15 @@ export function AdminSidebar() {
             </SidebarMenuItem>
 
             <SidebarMenuItem>
+              <SidebarMenuButton asChild isActive={pathname.includes("/admin/dashboard/Banners")}>
+                <Link href="/admin/dashboard/Banners">
+                  <ImageIcon className="h-5 w-5" />
+                  <span>Banners</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+
+            <SidebarMenuItem>
               <SidebarMenuButton asChild isActive={pathname.includes("/admin/dashboard/faculty")}>
                 <Link href="/admin/dashboard/faculty">
                   <Users className="h-5 w-5" />
