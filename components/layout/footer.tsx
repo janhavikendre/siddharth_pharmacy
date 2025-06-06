@@ -92,7 +92,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
-                <span className="text-gray-300">Deshmukh College Of Pharmacy , Tq. Nilanga , Dist.Latur -413607</span>
+                <span className="text-gray-300">Deshmukh College of Pharmacy, Kasar Sirsi- 413607
+Tq Nilanga Dist Latur</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-2" />
@@ -100,19 +101,20 @@ export default function Footer() {
                   href="mailto:523nationalinstitute@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  523nationalinstitute@gmail.com
+                  deshmukhpharmacy2022@gmail.com 
+
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-2" />
                 <a href="tel:+919974469124" className="text-gray-300 hover:text-white transition-colors">
-                  +91 9974469124
+                  +91 9975469123
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-2" />
                 <a href="tel:+918411888688" className="text-gray-300 hover:text-white transition-colors">
-                  +91 8411888688
+                  +91 8411888588
                 </a>
               </li>
               <li className="flex items-center">
