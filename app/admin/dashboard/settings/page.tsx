@@ -15,9 +15,11 @@ export default function SettingsPage() {
   const [adminPassword, setAdminPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
-  const [contactEmail, setContactEmail] = useState("523nationalinstitute@gmail.com")
-  const [contactPhone1, setContactPhone1] = useState("9974469124")
-  const [contactPhone2, setContactPhone2] = useState("8411888688")
+  const [contactEmail, setContactEmail] = useState("deshmukhpharmacy2022@gmail.com")
+  const [contactPhone1, setContactPhone1] = useState("9975469123
+")
+  const [contactPhone2, setContactPhone2] = useState("8411 888 588
+")
   const [workingHours, setWorkingHours] = useState("Mon-Sat: 9:00 AM - 5:00 PM")
   const [isLoading, setIsLoading] = useState(false)
   const [isSaving, setIsSaving] = useState(false)

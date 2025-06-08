@@ -99,7 +99,7 @@ export default function Header() {
             <div>
               <span className="font-semibold text-[#1a237e]">Call Us</span><br />
               <span className="text-gray-700">
-                <span>975469123
+                <span>9975469123
  / </span>
                 <span>8411888588</span>
               </span>

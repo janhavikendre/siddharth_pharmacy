@@ -94,7 +94,7 @@ Tq Nilanga Dist Latur</span>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-2" />
                 <a
-                  href="mailto:523nationalinstitute@gmail.com"
+                  href="mailto:deshmukhpharmacy2022@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   deshmukhpharmacy2022@gmail.com 
@@ -103,13 +103,15 @@ Tq Nilanga Dist Latur</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-2" />
-                <a href="tel:+919974469124" className="text-gray-300 hover:text-white transition-colors">
+                <a href="tel:+919975469123
+" className="text-gray-300 hover:text-white transition-colors">
                   +91 9975469123
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-2" />
-                <a href="tel:+918411888688" className="text-gray-300 hover:text-white transition-colors">
+                <a href="tel:+918411 888 588
+" className="text-gray-300 hover:text-white transition-colors">
                   +91 8411888588
                 </a>
               </li>

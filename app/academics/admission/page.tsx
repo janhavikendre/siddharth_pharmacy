@@ -199,8 +199,10 @@ export default async function AdmissionPage() {
 
             <div className="mt-6 pt-4 border-t">
               <h3 className="font-semibold mb-2">Contact for Admission</h3>
-              <p className="text-gray-700 mb-1">Phone: +91 9974469124, +91 8411888688</p>
-              <p className="text-gray-700">Email: 523nationalinstitute@gmail.com</p>
+              <p className="text-gray-700 mb-1">Phone: +91 9975469123
+, +91 8411 888 588
+</p>
+              <p className="text-gray-700">Email: deshmukhpharmacy2022@gmail.com</p>
             </div>
           </CardContent>
         </Card>

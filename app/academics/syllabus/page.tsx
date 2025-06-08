@@ -83,7 +83,8 @@ export default async function SyllabusPage() {
             <span className="font-medium">Email:</span> academic@nifd.edu
           </div>
           <div>
-            <span className="font-medium">Phone:</span> +91 9974469124
+            <span className="font-medium">Phone:</span> +91 9975469123
+
           </div>
         </div>
       </div>
