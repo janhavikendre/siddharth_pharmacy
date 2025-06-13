@@ -44,7 +44,7 @@ export default function EditBannerPage({ params }: { params: { id: string } }) {
           link: data.data.link || "",
           isActive: data.data.isActive,
         })
-        setImagePreview(data.data.imagePath || null)
+        setImagePreview(data.data.imageData || null)
       } else {
         alert("Banner not found")
         router.push("/admin/dashboard/Banners")

@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server"
 import clientPromise from "@/lib/mongodb"
 import { ObjectId } from "mongodb"
-import { writeFile, mkdir, unlink } from "fs/promises"
-import path from "path"
+import { v2 as cloudinary } from 'cloudinary'
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+})
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
   try {
@@ -54,7 +60,7 @@ export async function PUT(request: Request, { params }: { params: { id: string }
     const client = await clientPromise
     const db = client.db("fashion_institute")
 
-    // Get existing banner to check current image
+    // Get existing banner
     const existingBanner = await db.collection("banners").findOne({ _id: new ObjectId(id) })
     if (!existingBanner) {
       return NextResponse.json({ success: false, error: "Banner not found" }, { status: 404 })
@@ -69,45 +75,26 @@ export async function PUT(request: Request, { params }: { params: { id: string }
     }
 
     if (removeImage) {
-      updateData.imagePath = null
-      // Delete old image file if it exists
-      if (existingBanner.imagePath) {
-        try {
-          const oldFilePath = path.join(process.cwd(), "public", existingBanner.imagePath)
-          await unlink(oldFilePath)
-        } catch (error) {
-          console.log("Could not delete old image file:", error)
-        }
-      }
+      updateData.imageData = null
+      updateData.imageName = null
+      updateData.imageType = null
+      updateData.imageSize = null
     } else if (image && image.size > 0) {
-      // Create uploads directory if it doesn't exist
-      const uploadsDir = path.join(process.cwd(), "public", "uploads", "banners")
-      try {
-        await mkdir(uploadsDir, { recursive: true })
-      } catch (error) {
-        // Directory might already exist
+      // Check file size (limit to 5MB)
+      if (image.size > 5 * 1024 * 1024) {
+        return NextResponse.json({ success: false, error: "Image size must be less than 5MB" }, { status: 400 })
       }
 
-      // Generate unique filename
-      const timestamp = Date.now()
-      const fileExtension = path.extname(image.name)
-      const filename = `banner_${timestamp}${fileExtension}`
-      updateData.imagePath = `/uploads/banners/${filename}`
-
-      // Save new file
+      // Convert new image to base64
       const bytes = await image.arrayBuffer()
       const buffer = Buffer.from(bytes)
-      await writeFile(path.join(uploadsDir, filename), buffer)
+      const base64Image = buffer.toString('base64')
+      const imageDataUrl = `data:${image.type};base64,${base64Image}`
 
-      // Delete old image file if it exists
-      if (existingBanner.imagePath) {
-        try {
-          const oldFilePath = path.join(process.cwd(), "public", existingBanner.imagePath)
-          await unlink(oldFilePath)
-        } catch (error) {
-          console.log("Could not delete old image file:", error)
-        }
-      }
+      updateData.imageData = imageDataUrl
+      updateData.imageName = image.name
+      updateData.imageType = image.type
+      updateData.imageSize = image.size
     }
 
     const result = await db.collection("banners").updateOne(
@@ -140,27 +127,10 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
     const client = await clientPromise
     const db = client.db("fashion_institute")
 
-    // Get banner to delete associated image file
-    const banner = await db.collection("banners").findOne({ _id: new ObjectId(id) })
-    
-    if (!banner) {
-      return NextResponse.json({ success: false, error: "Banner not found" }, { status: 404 })
-    }
-
     // Delete the banner from database
     const result = await db.collection("banners").deleteOne({ _id: new ObjectId(id) })
 
     if (result.deletedCount === 1) {
-      // Delete associated image file if it exists
-      if (banner.imagePath) {
-        try {
-          const filePath = path.join(process.cwd(), "public", banner.imagePath)
-          await unlink(filePath)
-        } catch (error) {
-          console.log("Could not delete image file:", error)
-        }
-      }
-
       return NextResponse.json({ 
         success: true, 
         data: { deletedCount: result.deletedCount } 

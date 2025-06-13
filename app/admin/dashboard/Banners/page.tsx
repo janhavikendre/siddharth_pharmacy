@@ -177,10 +177,10 @@ export default function BannersPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {banners.map((banner) => (
                     <div key={banner._id} className="border rounded-lg overflow-hidden shadow-sm">
-                      {banner.imagePath && (
+                      {banner.imageData && (
                         <div className="relative h-48 w-full">
                           <Image
-                            src={banner.imagePath}
+                            src={banner.imageData}
                             alt={banner.title}
                             fill
                             className="object-cover"

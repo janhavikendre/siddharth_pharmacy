@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server"
 import clientPromise from "@/lib/mongodb"
 import { ObjectId } from "mongodb"
-import { writeFile, mkdir } from "fs/promises"
-import path from "path"
 
 export async function GET() {
   try {
@@ -49,33 +47,28 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: "Banner title is required" }, { status: 400 })
     }
 
+    // Check file size (limit to 5MB)
+    if (image.size > 5 * 1024 * 1024) {
+      return NextResponse.json({ success: false, error: "Image size must be less than 5MB" }, { status: 400 })
+    }
+
     const client = await clientPromise
     const db = client.db("fashion_institute")
 
-    // Create uploads directory if it doesn't exist
-    const uploadsDir = path.join(process.cwd(), "public", "uploads", "banners")
-    try {
-      await mkdir(uploadsDir, { recursive: true })
-    } catch (error) {
-      // Directory might already exist
-    }
-
-    // Generate unique filename
-    const timestamp = Date.now()
-    const fileExtension = path.extname(image.name)
-    const filename = `banner_${timestamp}${fileExtension}`
-    const imagePath = `/uploads/banners/${filename}`
-
-    // Save file
+    // Convert image to base64
     const bytes = await image.arrayBuffer()
     const buffer = Buffer.from(bytes)
-    await writeFile(path.join(uploadsDir, filename), buffer)
+    const base64Image = buffer.toString('base64')
+    const imageDataUrl = `data:${image.type};base64,${base64Image}`
 
     const result = await db.collection("banners").insertOne({
       title,
       description,
       link,
-      imagePath,
+      imageData: imageDataUrl,
+      imageName: image.name,
+      imageType: image.type,
+      imageSize: image.size,
       isActive,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -89,7 +82,7 @@ export async function POST(request: Request) {
           title,
           description,
           link,
-          imagePath,
+          imageData: imageDataUrl,
           isActive,
         },
       },
