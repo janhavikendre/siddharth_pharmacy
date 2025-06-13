@@ -81,7 +81,7 @@ export default function Header() {
           </div>
           <div>
             <h1 className="text-sm md:text-xl font-bold text-[#1a237e] uppercase leading-tight">Deshmukh College Of Pharmacy</h1>
-            <p className="text-xs md:text-sm text-gray-600">DTE Code- 2636</p>
+            <p className="text-xs md:text-sm text-gray-600">PCI - 8251 | DTE Code- 2636 | MSBTE Code-52343</p>
           </div>
         </div>
 
