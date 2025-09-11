@@ -80,8 +80,8 @@ export default function Header() {
             <Image src="/logo.svg" alt="Shramjivi Logo" fill className="object-contain" />
           </div>
           <div>
-            <h1 className="text-sm md:text-xl font-bold text-[#1a237e] uppercase leading-tight">Deshmukh College Of Pharmacy</h1>
-            <p className="text-xs md:text-sm text-gray-600">PCI - 8251 | DTE Code- 2636 | MSBTE Code-52343</p>
+            <h1 className="text-sm md:text-xl font-bold text-[#1a237e] uppercase leading-tight">Siddharth Institute of Pharmacy</h1>
+            <p className="text-xs md:text-sm text-gray-600">Dr Babasaheb Ambedkar Marathwada University Chhatrapati sambhajinagar</p>
           </div>
         </div>
 
@@ -91,25 +91,21 @@ export default function Header() {
             <MapPin className="text-blue-600 w-4 h-4 md:w-5 md:h-5" />
             <div>
               <span className="font-semibold text-[#1a237e]">Location</span><br />
-              <span className="text-gray-700">Kasar Sirsi 413607 Tq. Nilanga Dist. Latur</span>
+              <span className="text-gray-700">Mitmita Chhan.Sambhaji Nagar pincode: 431001</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <Phone className="text-blue-600 w-4 h-4 md:w-5 md:h-5" />
             <div>
               <span className="font-semibold text-[#1a237e]">Call Us</span><br />
-              <span className="text-gray-700">
-                <span>9975469123
- / </span>
-                <span>8411888588</span>
-              </span>
+              <span className="text-gray-700">+917888155999</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="text-blue-600 w-4 h-4 md:w-5 md:h-5" />
             <div>
               <span className="font-semibold text-[#1a237e]">Email</span><br />
-              <span className="text-gray-700">deshmukhpharmacy2022@gmail.com</span>
+              <span className="text-gray-700">pharmacysiddharth4@gmail.com</span>
             </div>
           </div>
         </div>

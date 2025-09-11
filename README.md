@@ -1,15 +1,15 @@
-# Deshmukh College of Pharmacy
+# Siddharth Institute of Pharmacy
 
-This is the official website for Deshmukh College of Pharmacy.
+This is the official website for Siddharth Institute of Pharmacy.
 
 ## About
 
-Deshmukh College of Pharmacy is committed to providing quality pharmacy education.
+Siddharth Institute of Pharmacy is committed to providing quality pharmacy education.
 
 ## Contact
 
-- Email: deshmukhpharmacy2022@gmail.com
-- Phone: +91 9975469123
+- Email: pharmacysiddharth4@gmail.com
+- Phone: +917888155999
 - Location: Kasar Sirsi, Nilanga, Dist. Latur
 
 ## Deployment

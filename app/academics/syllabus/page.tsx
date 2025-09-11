@@ -27,7 +27,7 @@ export default async function SyllabusPage() {
         <div>
           <h2 className="text-2xl font-bold mb-4 text-blue-800">Program Syllabus</h2>
           <p className="text-gray-700 mb-6">
-            Find detailed syllabus for all programs offered at the Deshmukh College Of Pharmacy. These
+            Find detailed syllabus for all programs offered at the Siddharth Institute of Pharmacy. These
             documents outline the course structure, subjects, credit distribution, and learning outcomes for each
             program.
           </p>
@@ -83,8 +83,7 @@ export default async function SyllabusPage() {
             <span className="font-medium">Email:</span> academic@nifd.edu
           </div>
           <div>
-            <span className="font-medium">Phone:</span> +91 9975469123
-
+            <span className="font-medium">Phone:</span> +917888155999
           </div>
         </div>
       </div>

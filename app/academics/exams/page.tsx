@@ -52,7 +52,7 @@ export default async function ExamsPage() {
               ) : (
                 <>
                   <p className="text-gray-700 mb-4">
-                    The Deshmukh College Of Pharmacy conducts examinations to evaluate students'
+                    The Siddharth Institute of Pharmacy conducts examinations to evaluate students'
                     understanding and application of concepts taught during the academic term. These examinations are
                     designed to assess theoretical knowledge as well as practical skills.
                   </p>
@@ -138,7 +138,7 @@ export default async function ExamsPage() {
                 <p className="text-gray-700 mt-2">
                   <span className="font-medium">Email:</span> exam@nifd.edu
                   <br />
-                  <span className="font-medium">Phone:</span> +91 9975469123
+                  <span className="font-medium">Phone:</span> +917888155999
 
                 </p>
               </div>

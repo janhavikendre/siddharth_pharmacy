@@ -119,7 +119,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: { ca
                   ) : (
                     <>
                       <p>
-                        The Deshmukh College Of Pharmacy library is a comprehensive resource center for pharmacy
+                        The Siddharth Institute of Pharmacy library is a comprehensive resource center for pharmacy
                         students and faculty. Our library houses an extensive collection of books, journals, magazines,
                         digital resources, and archives related to pharmaceutical sciences, pharmacology, medicinal chemistry, and
                         industry practices.

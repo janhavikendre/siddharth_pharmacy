@@ -199,10 +199,8 @@ export default async function AdmissionPage() {
 
             <div className="mt-6 pt-4 border-t">
               <h3 className="font-semibold mb-2">Contact for Admission</h3>
-              <p className="text-gray-700 mb-1">Phone: +91 9975469123
-, +91 8411 888 588
-</p>
-              <p className="text-gray-700">Email: deshmukhpharmacy2022@gmail.com</p>
+              <p className="text-gray-700 mb-1">Phone: +917888155999</p>
+              <p className="text-gray-700">Email: pharmacysiddharth4@gmail.com</p>
             </div>
           </CardContent>
         </Card>
@@ -340,7 +338,7 @@ export default async function AdmissionPage() {
                 dangerouslySetInnerHTML={{
                   __html:
                     content.scholarship ||
-                    "The Deshmukh College Of Pharmacy offers various scholarships to meritorious students and those from economically weaker sections. These scholarships are designed to support talented students in pursuing their education without financial constraints.",
+                    "The Siddharth Institute of Pharmacy offers various scholarships to meritorious students and those from economically weaker sections. These scholarships are designed to support talented students in pursuing their education without financial constraints.",
                 }}
               />
 

@@ -11,15 +11,17 @@ export default function InstituteHighlights() {
           {/* Left */}
           <div>
             <h2 className="text-green-600 text-sm font-semibold mb-4 tracking-widest uppercase">
-              WELCOME TO DESHMUKH COLLEGE OF PHARMACY
+              WELCOME TO SIDDHARTH INSTITUTE OF PHARMACY
             </h2>
             <h1 className="text-3xl sm:text-3xl md:text-3xl font-extrabold text-blue-900 mb-6 leading-tight ml-1">
               “Empowering Pharmacy Education for a Better Tomorrow”
             </h1>
             <p className="text-gray-600 text-lg mb-0">
-              Rahemaniya Taleemi Society, Nilanga’s Deshmukh College of Pharmacy (D.Pharmacy) is committed to fostering academic excellence and professional ethics. 
-              Located in Kasar Sirsi, Nilanga, Dist. Latur, our institute offers top-tier education with recognition from PCI (Code: 8281), and affiliation under DTE (Code: 2636) and MSBTE (Code: 52343). 
-              Our mission is to shape competent and compassionate healthcare professionals who serve the community with dedication.
+              Rahemaniya Taleemi Society’s Siddharth Institute of Pharmacy (D.Pharmacy) is committed to fostering academic
+              excellence and professional ethics. Located at Mitmita, Chhatrapati Sambhajinagar (Aurangabad) – 431001, the
+              institute is recognized by the Pharmacy Council of India (PCI – Code: 8281) and affiliated to Dr. Babasaheb
+              Ambedkar Marathwada University, Chhatrapati Sambhajinagar (with DTE Code: 2636 and MSBTE Code: 52343). Our mission
+              is to shape competent and compassionate healthcare professionals who serve the community with dedication.
             </p>
           </div>
 

@@ -88,31 +88,29 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
-                <span className="text-gray-300">Deshmukh College of Pharmacy, Kasar Sirsi- 413607
+                <span className="text-gray-300">Siddharth Institute of Pharmacy, Sambhaji Nagar pincode: 431001
 Tq Nilanga Dist Latur</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-2" />
                 <a
-                  href="mailto:deshmukhpharmacy2022@gmail.com"
+                  href="mailto:pharmacysiddharth4@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  deshmukhpharmacy2022@gmail.com 
+                  pharmacysiddharth4@gmail.com 
 
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-2" />
-                <a href="tel:+919975469123
-" className="text-gray-300 hover:text-white transition-colors">
-                  +91 9975469123
+                <a href="tel:+917888155999" className="text-gray-300 hover:text-white transition-colors">
+                  +917888155999
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-2" />
-                <a href="tel:+918411 888 588
-" className="text-gray-300 hover:text-white transition-colors">
-                  +91 8411888588
+                <a href="tel:+917888155999" className="text-gray-300 hover:text-white transition-colors">
+                  +917888155999
                 </a>
               </li>
               <li className="flex items-center">
@@ -125,7 +123,7 @@ Tq Nilanga Dist Latur</span>
 
         <div className="mt-12 border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Deshmukh College Of Pharmacy. All rights reserved.
+            &copy; {new Date().getFullYear()} Siddharth Institute of Pharmacy. All rights reserved.
           </p>
         </div>
       </div>

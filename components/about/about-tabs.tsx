@@ -21,7 +21,7 @@ export function AboutTabs({ about, directors, leadership, section }: AboutTabsPr
       <div className="space-y-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-2xl font-bold mb-4 text-blue-800">Deshmukh College Of Pharmacy</h2>
+            <h2 className="text-2xl font-bold mb-4 text-blue-800">Siddharth Institute of Pharmacy</h2>
             <div
               className="prose max-w-none"
               dangerouslySetInnerHTML={{ __html: about.institute || "Content coming soon..." }}

@@ -39,7 +39,7 @@ export default function AcademicsPage() {
         <section className="mb-16">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <p className="text-lg md:text-xl text-gray-700 mb-4">
-              The Deshmukh College Of Pharmacy offers a PCI-approved D.Pharmacy program designed to provide students with a strong foundation in pharmaceutical sciences and practical skills for a successful career in pharmacy.
+              The Siddharth Institute of Pharmacy offers a PCI-approved D.Pharmacy program designed to provide students with a strong foundation in pharmaceutical sciences and practical skills for a successful career in pharmacy.
             </p>
             <p className="text-base md:text-lg text-gray-600">
               Our curriculum is regularly updated to meet industry standards and regulatory requirements, ensuring our graduates are well-prepared for the evolving healthcare sector.

@@ -109,7 +109,7 @@ export default async function AcademicCalendarPage() {
             <p className="text-gray-700">
               <span className="font-medium">Email:</span> academic@nifd.edu
               <br />
-              <span className="font-medium">Phone:</span> +91 9975469123
+              <span className="font-medium">Phone:</span> +917888155999
 
             </p>
           </CardContent>

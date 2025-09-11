@@ -21,7 +21,7 @@ export default function HeroSection() {
       {/* Left static part */}
       <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-12 bg-blue-900 text-white relative z-10">
         {/* ...existing static content... */}
-        <h2 className="text-green-400 text-sm font-semibold mb-2 tracking-widest">WELCOME TO DESHMUKH COLLEGE OF PHARMACY</h2>
+        <h2 className="text-green-400 text-sm font-semibold mb-2 tracking-widest">WELCOME TO SIDDHARTH INSTITUTE OF PHARMACY</h2>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
           We Provide High<br />Quality <span className="underline decoration-green-400">Education</span><br />For Everyone
         </h1>

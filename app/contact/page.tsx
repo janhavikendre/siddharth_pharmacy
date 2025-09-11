@@ -45,8 +45,8 @@ export default function ContactPage() {
                 <Mail className="h-6 w-6" />
               </div>
               <h3 className="font-semibold mb-2 text-blue-800">Email</h3>
-              <a href="mailto:deshmukhpharmacy2022@gmail.com" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">
-                deshmukhpharmacy2022@gmail.com
+              <a href="mailto:pharmacysiddharth4@gmail.com" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">
+                pharmacysiddharth4@gmail.com
               </a>
             </CardContent>
           </Card>
@@ -57,11 +57,11 @@ export default function ContactPage() {
                 <Phone className="h-6 w-6" />
               </div>
               <h3 className="font-semibold mb-2 text-blue-800">Phone</h3>
-              <a href="tel:+919975469123" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">
-                +91 9975469123
+              <a href="tel:+917888155999" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">
+                +917888155999
               </a>
-              <a href="tel:+918411888588" className="text-blue-600 hover:text-blue-700 hover:underline mt-1 transition-colors">
-                +91 8411888588
+              <a href="tel:+917888155999" className="text-blue-600 hover:text-blue-700 hover:underline mt-1 transition-colors">
+                +917888155999
               </a>
             </CardContent>
           </Card>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Deshmukh College Of Pharmacy"
+                  title="Siddharth Institute of Pharmacy"
                 ></iframe>
               </div>
             </CardContent>
@@ -164,13 +164,13 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold mb-2 text-blue-800 text-lg">Our Address</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Deshmukh College Of Pharmacy,
+                  Siddharth Institute of Pharmacy,
                   <br />
-                  Kasar Sirsi 413607,
+                  Mitmita Chhan.
                   <br />
-                  Tq. Nilanga, Dist. Latur
+                  Sambhaji Nagar pincode: 431001
                   <br />
-                  Affiliated to S.N.D.T.W University, Mumbai
+                  Dr Babasaheb Ambedkar Marathwada University Chhatrapati sambhajinagar
                 </p>
               </div>
             </div>

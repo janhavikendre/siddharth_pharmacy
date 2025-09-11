@@ -73,7 +73,7 @@ export default function HeroBanner() {
             </span> */}
 					</div>
 					<h2 className="text-green-400 text-xs sm:text-sm md:text-base font-semibold mb-4 md:mb-6 tracking-widest">
-						WELCOME TO DESHMUKH COLLEGE OF PHARMACY
+						WELCOME TO SIDDHARTH INSTITUTE OF PHARMACY
 					</h2>
 					<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] font-extrabold mb-6 md:mb-10 leading-[1.1] md:leading-[1.08] tracking-tight">
 						We Provide High
