@@ -8,15 +8,15 @@
   <!-- Text around the top of the circle -->
   <path id="topText" d="M 256, 60 a 196, 196 0 0 1 0, 392 a 196, 196 0 0 1 0, -392" fill="none"/>
   <text>
-    <textPath href="#topText" startOffset="50%" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="24" fill="#333333">
-      Siddharth Institute of Pharmacy    </textPath>
+    <textPath href="#topText" startOffset="50%" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="20" fill="#333333">
+      SIDDHARTH INSTITUTE OF PHARMACY    </textPath>
   </text>
   
   <!-- Text around the bottom of the circle -->
   <path id="bottomText" d="M 256, 452 a 196, 196 0 0 1 0, -392 a 196, 196 0 0 1 0, 392" fill="none"/>
   <text>
-    <textPath href="#bottomText" startOffset="50%" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="20" fill="#333333">
-      KASAR SIRSI • ESTD-2010
+    <textPath href="#bottomText" startOffset="50%" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="16" fill="#333333">
+      CHHATRAPATI SAMBHAJINAGAR • ESTD-2020
     </textPath>
   </text>
   
@@ -38,11 +38,6 @@
     <circle cx="60" cy="-80" r="10" fill="#333333"/>
     <circle cx="90" cy="-20" r="10" fill="#333333"/>
     
-    <!-- NIFD initials -->
-    <text x="0" y="0" font-family="Arial" font-weight="bold" font-size="60" fill="#C9366F" text-anchor="middle">NIFD</text>
   </g>
   
-  <!-- Banner at the bottom -->
-  <path d="M 120, 350 L 80, 380 L 80, 410 L 432, 410 L 432, 380 L 392, 350 L 120, 350 Z" fill="white" stroke="#333333" stroke-width="3"/>
-  <text x="256" y="390" font-family="Arial" font-weight="bold" font-size="18" fill="#333333" text-anchor="middle">Affiliated to S.N.D.T.W University, Mumbai</text>
 </svg>

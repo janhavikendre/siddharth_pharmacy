@@ -88,8 +88,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
-                <span className="text-gray-300">Siddharth Institute of Pharmacy, Sambhaji Nagar pincode: 431001
-Tq Nilanga Dist Latur</span>
+                <span className="text-gray-300">Siddharth Institute of Pharmacy, Sambhaji Nagar pincode: 431002
+</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-2" />
@@ -107,12 +107,7 @@ Tq Nilanga Dist Latur</span>
                   +917888155999
                 </a>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-blue-400 mr-2" />
-                <a href="tel:+917888155999" className="text-gray-300 hover:text-white transition-colors">
-                  +917888155999
-                </a>
-              </li>
+             
               <li className="flex items-center">
                 <Clock className="h-5 w-5 text-blue-400 mr-2" />
                 <span className="text-gray-300">Mon-Sat: 9:00 AM - 5:00 PM</span>
@@ -121,10 +116,17 @@ Tq Nilanga Dist Latur</span>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Siddharth Institute of Pharmacy. All rights reserved.
-          </p>
+        <div className="mt-12 border-t border-gray-800 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+            <p className="text-gray-400 mb-2 sm:mb-0">
+              &copy; {new Date().getFullYear()} Siddharth Institute of Pharmacy. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-sm">
+              Website Engineered with ❤️ by <span className="text-orange-400">SOS STATISTICAL ANALYSIS AND IT SOLUTIONS pvt ltd</span>
+              <br />
+              contact here <span className="text-orange-400">sosresearch.it5601@gmail.com</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

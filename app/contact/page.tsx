@@ -168,7 +168,7 @@ export default function ContactPage() {
                   <br />
                   Mitmita Chhan.
                   <br />
-                  Sambhaji Nagar pincode: 431001
+                  Sambhaji Nagar pincode: 431002
                   <br />
                   Approved by PCI New Delhi
                 </p>

@@ -13,16 +13,18 @@ export default function InstituteHighlights() {
             <h2 className="text-green-600 text-sm font-semibold mb-4 tracking-widest uppercase">
               WELCOME TO SIDDHARTH INSTITUTE OF PHARMACY
             </h2>
-            <h1 className="text-3xl sm:text-3xl md:text-3xl font-extrabold text-blue-900 mb-6 leading-tight ml-1">
-              “Empowering Pharmacy Education for a Better Tomorrow”
-            </h1>
-            <p className="text-gray-600 text-lg mb-0">
-              Rahemaniya Taleemi Society’s Siddharth Institute of Pharmacy (D.Pharmacy) is committed to fostering academic
-              excellence and professional ethics. Located at Mitmita, Chhatrapati Sambhajinagar (Aurangabad) – 431001, the
-              institute is recognized by the Pharmacy Council of India (PCI – Code: 8281) and affiliated to Dr. Babasaheb
-              Ambedkar Marathwada University, Chhatrapati Sambhajinagar (with DTE Code: 2636 and MSBTE Code: 52343). Our mission
-              is to shape competent and compassionate healthcare professionals who serve the community with dedication.
+            <p className="text-gray-600 text-lg mb-4">
+              Ramai Pratishthan's Siddharth Institute of Pharmacy (D.Pharmacy) is committed to fostering academic excellence and professional ethics. Located at Mitmita, Chhatrapati Sambhajinagar (Aurangabad) – 431002, the institute is recognized by the Pharmacy Council of India New Delhi (PCI – Code: 10549) and affiliated to DTE, Mumbai. Our mission is to shape competent and compassionate healthcare professionals who serve the community with dedication.
             </p>
+            <p className="text-gray-600 text-lg mb-4">
+              Our campus offers a conducive learning atmosphere, equipped with modern facilities and located within reach of major cities like Chhatrapati Sambhajinagar (Aurangabad). We emphasize quality education through a curriculum designed to meet global pharmacy standards.
+            </p>
+            <p className="text-gray-600 text-lg mb-6">
+              Students are guided by experienced faculty and benefit from excellent infrastructure that supports both academic and co-curricular growth.
+            </p>
+            <h1 className="text-3xl sm:text-3xl md:text-3xl font-extrabold text-blue-900 mb-0 leading-tight ml-1">
+              "Empowering Pharmacy Education for a Better Tomorrow"
+            </h1>
           </div>
 
           {/* Right */}
