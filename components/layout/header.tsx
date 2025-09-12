@@ -81,7 +81,7 @@ export default function Header() {
           </div>
           <div>
             <h1 className="text-sm md:text-xl font-bold text-[#1a237e] uppercase leading-tight">Siddharth Institute of Pharmacy</h1>
-            <p className="text-xs md:text-sm text-gray-600">Dr Babasaheb Ambedkar Marathwada University Chhatrapati sambhajinagar</p>
+            <p className="text-xs md:text-sm text-gray-600">Affiliated to DTE & Approved by PCI New Delhi</p>
           </div>
         </div>
 
