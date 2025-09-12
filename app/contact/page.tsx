@@ -141,7 +141,7 @@ export default function ContactPage() {
             <CardContent className="p-0">
               <div className="h-full min-h-[300px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15186.013811134044!2d76.74156135!3d17.937091199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf4166f8287605%3A0xec1001da3d0dfc40!2sDESHMUKH%20COLLEGE%20OF%20PHARMACY%20KASAR%20SIRSI!5e0!3m2!1sen!2sin!4v1701840230740!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/place/Siddharth+College+Of+Library+And+Information+Science/@19.9033209,75.2651619,18.34z/data=!4m15!1m8!3m7!1s0x3bdb975893ee47d1:0x35a1234a30dcaf74!2sMitmita,+Deogiri+Valley,+Maharashtra+431002!3b1!8m2!3d19.9014684!4d75.2634923!16s%2Fg%2F11f734pnzv!3m5!1s0x3bdb975ed1251551:0xd95b51dd51e7ee18!8m2!3d19.903782!4d75.2659072!16s%2Fg%2F11hcym23x9?entry=ttu&g_ep=EgoyMDI1MDkwOS4wIKXMDSoASAFQAw%3D%3D"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: "300px" }}
