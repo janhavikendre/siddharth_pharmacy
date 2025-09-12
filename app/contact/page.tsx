@@ -170,7 +170,7 @@ export default function ContactPage() {
                   <br />
                   Sambhaji Nagar pincode: 431001
                   <br />
-                  Affiliated to DTE & Approved by PCI New Delhi
+                  Approved by PCI New Delhi
                 </p>
               </div>
             </div>
