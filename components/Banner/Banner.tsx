@@ -10,7 +10,7 @@ interface Banner {
   title: string
   description?: string
   link?: string
-  imagePath: string
+  imageData: string
   isActive: boolean
 }
 
@@ -59,7 +59,7 @@ export default function Banner({ banners }: BannerProps) {
         <div className="relative">
           {/* Main Banner Image - Show as is */}
           <Image
-            src={currentBanner.imagePath}
+            src={currentBanner.imageData}
             alt={currentBanner.title}
             width={0}
             height={0}
