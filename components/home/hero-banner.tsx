@@ -87,7 +87,7 @@ export default function HeroBanner() {
 					</h1>
 					<p className="mb-8 md:mb-12 text-base sm:text-lg md:text-2xl max-w-2xl text-white/90">
 						The college aims at shaping the bright future of students in a proper
-						wave, because a student is the central figure in the stream of
+						way, because a student is the central figure in the stream of
 						education in the universe.
 					</p>
 					<Button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded transition w-fit text-sm sm:text-base">

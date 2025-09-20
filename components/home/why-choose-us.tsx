@@ -1,14 +1,14 @@
 import { CheckCircle } from "lucide-react"
 
 const reasons = [
-  "PCI-approved D.Pharmacy program with updated syllabus",
-  "Well-equipped laboratories with modern instruments",
-  "Experienced and qualified faculty in pharmaceutical sciences",
-  "Guidance for competitive exams and higher studies",
-  "Strong academic support and mentorship system",
-  "Focus on ethical values and community service",
-  "Collaborations with healthcare institutions for training",
-  "Calm, focused campus environment ideal for learning",
+  "PCI-approved D.Pharmacy program with updated syllabus.",
+  "Well-equipped laboratories with modern instruments.",
+  "Experienced and qualified faculty in pharmaceutical sciences.",
+  "Guidance for competitive exams and higher studies.",
+  "Strong academic support and mentorship system.",
+  "Focus on ethical values and community service.",
+  "Collaborations with healthcare institutions for training.",
+  "Calm, focused campus environment ideal for learning.",
 ]
 
 export default function WhyChooseUs() {
@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
         </h2>
         <div className="w-full max-w-2xl mx-auto">
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 text-center">
-            At Siddharth Institute of Pharmacy, we are dedicated to shaping competent pharmacy professionals through a value-based, practical, and industry-oriented education.
+            At Siddharth Institute of Pharmacy, we are dedicated to competent pharmacy professionals through a value-based, practical, and industry-oriented education.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">

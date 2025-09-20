@@ -7,7 +7,7 @@ export default function CallToAction() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
         <p className="text-lg mb-8 max-w-3xl mx-auto">
-          Applications are now open for the upcoming academic year. Take the first step towards your creative career in
+        Applications are now open for the acedemic year 2025-2026. Take the first step towards your creative career in
           pharmacy.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">

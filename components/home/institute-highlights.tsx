@@ -31,7 +31,7 @@ export default function InstituteHighlights() {
           <div className="flex flex-col justify-between h-full">
             <div>
               <p className="text-gray-600 text-lg mb-4">
-                Our campus offers a conducive learning atmosphere, equipped with modern facilities and located within reach of major cities like Latur. 
+                Our campus offers a conducive learning atmosphere, equipped with modern facilities. 
                 We emphasize quality education through a curriculum designed to meet global pharmacy standards.
               </p>
               <p className="text-gray-600 text-lg mb-6">
