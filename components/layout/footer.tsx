@@ -116,7 +116,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-800 pt-8">
+        {/* <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
             <p className="text-gray-400 mb-2 sm:mb-0">
               &copy; {new Date().getFullYear()} Siddharth Institute of Pharmacy. All rights reserved.
@@ -127,7 +127,7 @@ export default function Footer() {
               contact here <span className="text-orange-400">sosresearch.it5601@gmail.com</span>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   )

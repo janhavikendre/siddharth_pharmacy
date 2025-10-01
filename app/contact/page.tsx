@@ -78,10 +78,10 @@ export default function ContactPage() {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <Card className="border-blue-100 shadow-lg">
+        <div className="flex justify-center mb-12">
+          <Card className="border-blue-100 shadow-lg w-full max-w-2xl">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold mb-6 text-blue-800">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold mb-6 text-blue-800 text-center">Send Us a Message</h2>
 
               <form className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -127,30 +127,15 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white w-full md:w-auto px-8 py-2 transition-colors shadow-md"
-                >
-                  Send Message
-                </Button>
+                <div className="flex justify-center">
+                  <Button 
+                    type="submit" 
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2 transition-colors shadow-md"
+                  >
+                    Send Message
+                  </Button>
+                </div>
               </form>
-            </CardContent>
-          </Card>
-
-          <Card className="border-blue-100 shadow-lg overflow-hidden">
-            <CardContent className="p-0">
-              <div className="h-full min-h-[300px]">
-                <iframe
-                  src="https://www.google.com/maps/place/Siddharth+College+Of+Library+And+Information+Science/@19.9033209,75.2651619,18.34z/data=!4m15!1m8!3m7!1s0x3bdb975893ee47d1:0x35a1234a30dcaf74!2sMitmita,+Deogiri+Valley,+Maharashtra+431002!3b1!8m2!3d19.9014684!4d75.2634923!16s%2Fg%2F11f734pnzv!3m5!1s0x3bdb975ed1251551:0xd95b51dd51e7ee18!8m2!3d19.903782!4d75.2659072!16s%2Fg%2F11hcym23x9?entry=ttu&g_ep=EgoyMDI1MDkwOS4wIKXMDSoASAFQAw%3D%3D"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, minHeight: "300px" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Siddharth Institute of Pharmacy"
-                ></iframe>
-              </div>
             </CardContent>
           </Card>
         </div>
@@ -166,7 +151,7 @@ export default function ContactPage() {
                 <p className="text-gray-700 leading-relaxed">
                   Siddharth Institute of Pharmacy,
                   <br />
-                  Mitmita Chhan.
+                  Mitmita Chhatrapati
                   <br />
                   Sambhaji Nagar pincode: 431002
                   <br />

@@ -91,7 +91,7 @@ export default function Header() {
             <MapPin className="text-blue-600 w-4 h-4 md:w-5 md:h-5" />
             <div>
               <span className="font-semibold text-[#1a237e]">Location</span><br />
-              <span className="text-gray-700">Mitmita Chhan.Sambhaji Nagar pincode: 431002</span>
+              <span className="text-gray-700">Mitmita Chhatrapati Sambhaji Nagar pincode: 431002</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
