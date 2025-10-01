@@ -88,7 +88,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
-                <span className="text-gray-300">Siddharth Institute of Pharmacy, Sambhaji Nagar pincode: 431002
+                <span className="text-gray-300">Siddharth Institute of Pharmacy,Chhatrapati Sambhaji Nagar pincode: 431002
 </span>
               </li>
               <li className="flex items-center">
